@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1768573221355",
+    "userId": "1768573221355",
+    "name": "Teste User",
+    "ongId": null,
+    "skills": [],
+    "availability": true,
+    "stats": {
+      "completedServices": 0,
+      "rating": 0,
+      "points": 0
+    },
+    "location": null
+  },
+  {
+    "id": "1768574221342",
+    "userId": "1768574221342",
+    "name": "jovem",
+    "phone": "1184384834",
+    "ongId": null,
+    "skills": [],
+    "availability": true,
+    "stats": {
+      "completedServices": 0,
+      "rating": 0,
+      "points": 0
+    },
+    "location": null
+  },
+  {
+    "id": "1768576032920",
+    "name": "Fabio",
+    "email": "fabio@teste.com",
+    "phone": "1134324242",
+    "birthDate": "2000-03-16",
+    "cpf": "32112345676",
+    "rg": "336477899",
+    "address": "ffdsfdsf",
+    "skills": [],
+    "documents": [
+      {
+        "name": "Captura de Tela 2026-01-16 às 09.59.35.png",
+        "path": "/uploads/document-1768576024129-104990697.png",
+        "size": 306632
+      }
+    ],
+    "ongId": "1768573731153",
+    "age": 25,
+    "availability": true,
+    "stats": {
+      "completedServices": 0,
+      "rating": 0,
+      "points": 0
+    },
+    "createdAt": "2026-01-16T15:07:12.920Z"
+  }
+]

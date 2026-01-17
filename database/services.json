@@ -1,0 +1,82 @@
+[
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "description": "Limpeza básica de residência incluindo varredura, organização e limpeza de superfícies",
+    "category": "Limpeza",
+    "price": 50,
+    "duration": 2,
+    "status": "available",
+    "createdAt": "2026-01-16T00:00:00.000Z"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "description": "Manutenção de jardim, corte de grama, poda de plantas e coleta de folhas",
+    "category": "Jardinagem",
+    "price": 80,
+    "duration": 3,
+    "status": "available",
+    "createdAt": "2026-01-16T00:00:00.000Z"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "description": "Pintura de paredes internas de até 20m² com tinta fornecida pelo cliente",
+    "category": "Pintura",
+    "price": 150,
+    "duration": 4,
+    "status": "available",
+    "createdAt": "2026-01-16T00:00:00.000Z"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "description": "Organização de ambientes, armários, closets e espaços diversos",
+    "category": "Organização",
+    "price": 60,
+    "duration": 2,
+    "status": "available",
+    "createdAt": "2026-01-16T00:00:00.000Z"
+  },
+  {
+    "id": "service005",
+    "title": "Auxílio em Mudança",
+    "description": "Auxílio em mudanças residenciais, transporte e organização de móveis e caixas",
+    "category": "Mudança",
+    "price": 100,
+    "duration": 4,
+    "status": "available",
+    "createdAt": "2026-01-16T00:00:00.000Z"
+  },
+  {
+    "id": "service006",
+    "title": "Manutenção Básica",
+    "description": "Pequenos reparos domésticos, troca de lâmpadas, conserto de torneiras",
+    "category": "Manutenção",
+    "price": 70,
+    "duration": 2,
+    "status": "available",
+    "createdAt": "2026-01-16T00:00:00.000Z"
+  },
+  {
+    "id": "service008",
+    "title": "Assistência a Idosos",
+    "description": "Companhia e auxílio em tarefas cotidianas para pessoas idosas",
+    "category": "Assistência",
+    "price": 90,
+    "duration": 3,
+    "status": "available",
+    "createdAt": "2026-01-16T00:00:00.000Z"
+  },
+  {
+    "id": "1768574983568",
+    "title": "Lavar carro",
+    "description": "Lavar carro a domicilio",
+    "category": "Limpeza",
+    "price": 30,
+    "duration": 2,
+    "status": "available",
+    "createdAt": "2026-01-16T14:49:43.568Z"
+  }
+]
