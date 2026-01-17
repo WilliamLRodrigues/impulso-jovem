@@ -24,7 +24,7 @@ const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3000';
 const corsOptions = {
   origin: isProduction 
     ? [frontendUrl, process.env.FRONTEND_URL_ALT] // Em produção, usa variáveis de ambiente
-    : ['http://localhost', 'http://localhost:80', 'http://localhost:3000', 'http://127.0.0.1', '*'], // Local: aceita tudo
+    : ['http://localhost', 'http://localhost:80', 'http://localhost:3000', 'https://impulso-jovem.onrender.com', '*'], // Local: aceita tudo
   credentials: true,
   optionsSuccessStatus: 200,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
