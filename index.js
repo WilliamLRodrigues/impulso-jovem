@@ -17,14 +17,30 @@ const uploadRoutes = require('./routes/upload');
 
 const app = express();
 
-// Configurar CORS - Detecta automaticamente o ambiente
-const isProduction = process.env.NODE_ENV === 'production';
-const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3000';
+// ========================
+// CORS (Render / Production)
+// ========================
+// Em produção: permita APENAS os domínios definidos no Render (FRONTEND_URL e FRONTEND_URL_ALT)
+// Em dev: permita localhost
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  process.env.FRONTEND_URL_ALT,
+  'http://localhost:3000',
+  'http://localhost',
+  'http://localhost:80'
+].filter(Boolean);
 
 const corsOptions = {
-  origin: isProduction 
-    ? [frontendUrl, process.env.FRONTEND_URL_ALT] // Em produção, usa variáveis de ambiente
-    : ['http://localhost', 'http://localhost:80', 'http://localhost:3000', 'https://impulso-jovem-fe.onrender.com'], // Local: aceita tudo
+  origin: function (origin, callback) {
+    // Permite requests sem origin (ex.: healthcheck, curl, Postman)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+
+    return callback(new Error(`CORS blocked for origin: ${origin}`));
+  },
   credentials: true,
   optionsSuccessStatus: 200,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -33,6 +49,9 @@ const corsOptions = {
 
 // Middleware
 app.use(cors(corsOptions));
+// Garante que preflight OPTIONS responda sempre (evita cair no 404)
+app.options('*', cors(corsOptions));
+
 app.use(bodyParser.json());
 app.use(express.json());
 
@@ -51,12 +70,11 @@ app.use('/api/bookings', bookingRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/upload', uploadRoutes);
-app.use('/api/admin', adminRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
-  res.json({ 
-    status: 'ok', 
+  res.json({
+    status: 'ok',
     timestamp: new Date().toISOString(),
     service: 'Impulso Jovem API'
   });
@@ -64,7 +82,7 @@ app.get('/api/health', (req, res) => {
 
 // Rota padrão
 app.get('/', (req, res) => {
-  res.json({ 
+  res.json({
     message: 'Impulso Jovem API',
     version: '1.0.0',
     endpoints: {
@@ -74,14 +92,15 @@ app.get('/', (req, res) => {
       services: '/api/services',
       bookings: '/api/bookings',
       reviews: '/api/reviews',
-      admin: '/api/admin'
+      admin: '/api/admin',
+      upload: '/api/upload'
     }
   });
 });
 
 // Error handling
 app.use((err, req, res, next) => {
-  console.error(err.stack);
+  console.error(err.stack || err);
   res.status(500).json({ error: 'Algo deu errado!' });
 });
 
@@ -95,8 +114,9 @@ const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`🌍 Ambiente: ${process.env.NODE_ENV || 'development'}`);
   console.log(`📊 API disponível em: http://localhost:${PORT}/api`);
   console.log(`🏥 Health check: http://localhost:${PORT}/api/health`);
+
   if (process.env.NODE_ENV === 'production') {
-    console.log(`🌐 Frontend URL: ${frontendUrl}`);
+    console.log(`🌐 Allowed origins: ${allowedOrigins.join(', ')}`);
   } else {
     console.log(`💻 Modo local - Acesse via proxy na porta 80 ou diretamente na ${PORT}`);
   }
