@@ -20,8 +20,6 @@ const app = express();
 // ========================
 // CORS (Render / Production)
 // ========================
-// Em produção: permita APENAS os domínios definidos no Render (FRONTEND_URL e FRONTEND_URL_ALT)
-// Em dev: permita localhost
 const allowedOrigins = [
   process.env.FRONTEND_URL,
   process.env.FRONTEND_URL_ALT,
@@ -32,7 +30,7 @@ const allowedOrigins = [
 
 const corsOptions = {
   origin: function (origin, callback) {
-    // Permite requests sem origin (ex.: healthcheck, curl, Postman)
+    // Permite requests sem origin (Postman, curl, health checks)
     if (!origin) return callback(null, true);
 
     if (allowedOrigins.includes(origin)) {
@@ -49,8 +47,10 @@ const corsOptions = {
 
 // Middleware
 app.use(cors(corsOptions));
-// Garante que preflight OPTIONS responda sempre (evita cair no 404)
-app.options('*', cors(corsOptions));
+
+// ⚠️ Express/Router (path-to-regexp v6) não aceita '*' aqui
+// Use regex para cobrir qualquer rota no preflight
+app.options(/.*/, cors(corsOptions));
 
 app.use(bodyParser.json());
 app.use(express.json());
