@@ -3,12 +3,27 @@ const router = express.Router();
 const upload = require('../middleware/upload');
 const { authenticateToken } = require('../middleware/auth');
 
+// Middleware para tratar erros do multer
+const handleMulterError = (err, req, res, next) => {
+  if (err) {
+    console.error('❌ Erro no upload:', err.message);
+    return res.status(400).json({ error: err.message });
+  }
+  next();
+};
+
 // Upload de documentos
 router.post('/document', authenticateToken, upload.single('document'), (req, res) => {
+  console.log('📄 Upload de documento recebido');
+  console.log('File:', req.file);
+  console.log('Body:', req.body);
+  
   if (!req.file) {
+    console.log('❌ Nenhum arquivo recebido');
     return res.status(400).json({ error: 'Nenhum arquivo foi enviado' });
   }
   
+  console.log('✅ Arquivo salvo:', req.file.filename);
   res.json({
     message: 'Arquivo enviado com sucesso',
     filename: req.file.filename,
