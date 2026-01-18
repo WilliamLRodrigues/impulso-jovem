@@ -76,7 +76,7 @@ const sendBookingConfirmation = async (clientEmail, clientName, serviceName, dat
               </div>
               
               <p style="text-align: center; margin-top: 30px;">
-                <a href="http://localhost:3000/cliente/agendamentos" class="button">Ver Meus Agendamentos</a>
+                <a href="https://www.impulsojovem.com.br/cliente/agendamentos" class="button">Ver Meus Agendamentos</a>
               </p>
             </div>
             <div class="footer">
@@ -170,7 +170,7 @@ const sendJovemAcceptedNotification = async (clientEmail, clientName, serviceNam
               </div>
               
               <p style="text-align: center; margin-top: 30px;">
-                <a href="http://localhost:3000/cliente/agendamentos" class="button">Ver Detalhes do Agendamento</a>
+                <a href="https://www.impulsojovem.com.br/cliente/agendamentos" class="button">Ver Detalhes do Agendamento</a>
               </p>
             </div>
             <div class="footer">
@@ -272,7 +272,7 @@ const sendThankYouEmail = async (clientEmail, clientName, serviceName, jovemName
               </div>
               
               <p style="text-align: center; margin-top: 30px;">
-                <a href="http://localhost:3000/cliente/servicos" class="button">Agendar Novo Serviço</a>
+                <a href="https://www.impulsojovem.com.br/cliente/servicos" class="button">Agendar Novo Serviço</a>
               </p>
             </div>
             <div class="footer">
