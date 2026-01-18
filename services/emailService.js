@@ -149,24 +149,34 @@ const sendJovemAcceptedNotification = async (clientEmail, clientName, serviceNam
                 <p><strong>Horário:</strong> ${time}</p>
               </div>
               
-              <div class="pin-box">
-                <p style="margin: 0 0 10px 0; font-weight: bold; color: #1565C0;">🔑 PIN DE CHECK-IN</p>
-                <div class="pin">${checkInPin}</div>
-                <p style="margin: 10px 0 0 0; font-size: 14px; color: #1565C0;">Anote este PIN!</p>
-              </div>
-              
-              <div class="card" style="background: #E8F5E9; border-left: 4px solid #4CAF50;">
-                <p style="margin: 0;"><strong>📋 Como Funciona:</strong></p>
-                <ol style="margin: 10px 0;">
-                  <li>O jovem chegará no horário agendado</li>
-                  <li>Ele informará o PIN de check-in acima</li>
-                  <li>Você valida o PIN no aplicativo para iniciar o serviço</li>
-                  <li>Após conclusão, você avalia o atendimento</li>
-                </ol>
+              <div class="card" style="background: #E3F2FD; border-left: 4px solid #2196F3;">
+                <p style="margin: 0 0 10px 0;"><strong>🔐 Segurança e Validação do Serviço</strong></p>
+                <p style="margin: 10px 0; line-height: 1.8;">
+                  Para sua segurança, quando o jovem chegar, <strong>peça o PIN de 4 dígitos</strong> que ele possui. 
+                  Em seguida, <strong>informe o PIN no aplicativo</strong> para validar o check-in e iniciar o serviço.
+                </p>
+                <p style="margin: 10px 0; font-size: 14px; color: #1565C0;">
+                  ⚠️ Importante: O serviço só pode ser iniciado após a validação do PIN no app.
+                </p>
               </div>
               
               <div class="card" style="background: #FFF3E0; border-left: 4px solid #FF9800;">
-                <p style="margin: 0;"><strong>💡 Dica:</strong> Tenha todos os materiais necessários separados antes do horário agendado para otimizar o tempo do serviço.</p>
+                <p style="margin: 0 0 10px 0;"><strong>💰 Pagamento ao Jovem</strong></p>
+                <p style="margin: 0;">
+                  O valor do serviço será repassado ao jovem <strong>somente após você avaliar e finalizar o serviço</strong> 
+                  na plataforma. Isso garante que você esteja satisfeito com o trabalho realizado.
+                </p>
+              </div>
+              
+              <div class="card" style="background: #E8F5E9; border-left: 4px solid #4CAF50;">
+                <p style="margin: 0;"><strong>📋 Passo a Passo:</strong></p>
+                <ol style="margin: 10px 0;">
+                  <li>O jovem chegará no horário agendado</li>
+                  <li>Pergunte o PIN de check-in ao jovem</li>
+                  <li>Valide o PIN no aplicativo para iniciar o serviço</li>
+                  <li>Após conclusão, avalie o atendimento no app</li>
+                  <li>O pagamento será liberado ao jovem automaticamente</li>
+                </ol>
               </div>
               
               <p style="text-align: center; margin-top: 30px;">
