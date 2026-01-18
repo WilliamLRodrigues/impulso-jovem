@@ -6,5 +6,35 @@
     "name": "Administrador",
     "userType": "admin",
     "createdAt": "2026-01-16T00:00:00.000Z"
+  },
+  {
+    "id": "1768770209612",
+    "email": "ong@impulso.com",
+    "password": "$2b$10$eCfmHBgXFfcTgYFPdqSe1ORHujF5vdN3vGj9nUb06WMQWuaiAm40m",
+    "name": "Ong teste",
+    "userType": "ong",
+    "phone": "11434343443",
+    "address": "Rua Jose Adorno, 204",
+    "createdAt": "2026-01-18T21:03:29.612Z"
+  },
+  {
+    "id": "1768770289856",
+    "email": "jovem@impulso.com",
+    "password": "$2b$10$mrMWTj9KL9P5zHBSOy3Vueti9T5pyrMMmb7epbd45NQuULRyuAPXS",
+    "name": "Joao",
+    "userType": "jovem",
+    "firstLogin": false,
+    "createdAt": "2026-01-18T21:04:49.856Z",
+    "updatedAt": "2026-01-18T21:07:39.569Z"
+  },
+  {
+    "id": "1768770332807",
+    "email": "cliente@impulso.com",
+    "password": "$2b$10$Kjm6jHaqw4rTCImGAFLN/ejGuQMjXOLi7/xVub2O9pgTLG3rYsm2.",
+    "name": "William",
+    "userType": "cliente",
+    "phone": "11345254235",
+    "address": "Rua Jose Adorno, 300",
+    "createdAt": "2026-01-18T21:05:32.807Z"
   }
 ]

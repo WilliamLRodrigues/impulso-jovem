@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "id": "1768770557664",
+    "bookingId": "1768770351842",
+    "serviceId": "service001",
+    "jovemId": "1768770289856",
+    "clientId": "1768770332807",
+    "rating": 4,
+    "comment": "otimo",
+    "photos": [],
+    "createdAt": "2026-01-18T21:09:17.664Z"
+  },
+  {
+    "id": "1768770797626",
+    "bookingId": "1768770724878",
+    "serviceId": "service002",
+    "jovemId": "1768770289856",
+    "clientId": "1768770332807",
+    "rating": 5,
+    "comment": "otimo",
+    "photos": [
+      "blob:http://localhost:3000/51d33b8c-a42b-4e56-9424-dc987ffb56c9"
+    ],
+    "createdAt": "2026-01-18T21:13:17.626Z"
+  },
+  {
+    "id": "1768771071533",
+    "bookingId": "1768770974642",
+    "serviceId": "service001",
+    "jovemId": "1768770289856",
+    "clientId": "1768770332807",
+    "rating": 3,
+    "comment": "dsada",
+    "photos": [
+      "/uploads/photos-1768771068594-324618971.png"
+    ],
+    "createdAt": "2026-01-18T21:17:51.533Z"
+  },
+  {
+    "id": "1768771181755",
+    "bookingId": "1768771132428",
+    "serviceId": "service003",
+    "jovemId": "1768770289856",
+    "clientId": "1768770332807",
+    "rating": 3,
+    "comment": "fdfsf",
+    "photos": [
+      "/uploads/photos-1768771175579-737160525.jpg"
+    ],
+    "createdAt": "2026-01-18T21:19:41.755Z"
+  }
+]

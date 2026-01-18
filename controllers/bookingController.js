@@ -409,8 +409,23 @@ const getAvailableServicesForClient = (req, res) => {
   
   // Filtrar serviços que têm jovens disponíveis na mesma localização
   console.log('🔍 Total de serviços:', services.length);
+  console.log('🔍 Serviços cadastrados:', JSON.stringify(services.map(s => ({ 
+    id: s.id, 
+    title: s.title, 
+    status: s.status,
+    jovemId: s.jovemId,
+    category: s.category 
+  })), null, 2));
   console.log('🔍 Serviços disponíveis (status=available):', services.filter(s => s.status === 'available').length);
   console.log('🔍 Total de jovens:', jovens.length);
+  console.log('🔍 Jovens cadastrados:', JSON.stringify(jovens.map(j => ({
+    id: j.id,
+    name: j.name,
+    availability: j.availability,
+    state: j.state,
+    city: j.city,
+    skills: j.skills
+  })), null, 2));
   
   const availableServices = services
     .filter(s => s.status === 'available')
@@ -705,10 +720,8 @@ const completeServiceByClient = (req, res) => {
     finalPrice: servicePrice
   };
   
-  // Deletar fotos enviadas pelo cliente (economizar espaço)
-  if (booking.clientPhotos && booking.clientPhotos.length > 0) {
-    deleteServicePhotos(booking.clientPhotos);
-  }
+  // NÃO deletar fotos do cliente - elas precisam ficar disponíveis no histórico
+  // Caso queira economizar espaço, implementar limpeza automática após 30+ dias
   
   // Criar review
   const newReview = {

@@ -1,1 +1,78 @@
-[]
+[
+  {
+    "id": "1768770289856",
+    "userId": "1768770289856",
+    "name": "Joao",
+    "email": "jovem@impulso.com",
+    "phone": "1132432432",
+    "birthDate": "1997-05-16",
+    "cpf": "4342344324325",
+    "rg": "43243224324",
+    "address": "Rua Jose Adorno, 20",
+    "country": "Brasil",
+    "state": "SP",
+    "city": "São Paulo",
+    "photo": "/uploads/photo-1768770222304-565395353.png",
+    "description": "Quero Crescer",
+    "skills": [
+      "service001",
+      "service002",
+      "service003",
+      "service004"
+    ],
+    "documents": [
+      {
+        "name": "Impulsologo.png",
+        "path": "/uploads/document-1768770286424-224591895.png",
+        "size": 997811
+      }
+    ],
+    "workingSchedule": {
+      "segunda-feira": {
+        "enabled": true,
+        "start": "08:00",
+        "end": "18:00"
+      },
+      "terça-feira": {
+        "enabled": true,
+        "start": "08:00",
+        "end": "18:00"
+      },
+      "quarta-feira": {
+        "enabled": true,
+        "start": "08:00",
+        "end": "18:00"
+      },
+      "quinta-feira": {
+        "enabled": true,
+        "start": "08:00",
+        "end": "18:00"
+      },
+      "sexta-feira": {
+        "enabled": true,
+        "start": "08:00",
+        "end": "18:00"
+      },
+      "sábado": {
+        "enabled": false,
+        "start": "08:00",
+        "end": "18:00"
+      },
+      "domingo": {
+        "enabled": false,
+        "start": "08:00",
+        "end": "18:00"
+      }
+    },
+    "ongId": "1768770209612",
+    "age": 28,
+    "availability": true,
+    "stats": {
+      "completedServices": 4,
+      "rating": 3.75,
+      "points": 150,
+      "totalEarnings": 200
+    },
+    "createdAt": "2026-01-18T21:04:49.857Z"
+  }
+]
