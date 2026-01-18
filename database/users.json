@@ -6,53 +6,5 @@
     "name": "Administrador",
     "userType": "admin",
     "createdAt": "2026-01-16T00:00:00.000Z"
-  },
-  {
-    "id": "1768573221355",
-    "email": "teste@teste.com",
-    "password": "$2b$10$NHwgihir6p7yp8JEx4YxSeo5lX.xlwZ.lws.n.x3y2neH09FkDBHC",
-    "name": "Teste User",
-    "userType": "jovem",
-    "createdAt": "2026-01-16T14:20:21.355Z"
-  },
-  {
-    "id": "1768573731153",
-    "email": "william@teste.com",
-    "password": "$2b$10$bHRvd7TCvaiTwCQVEH4IuO0qmkdzBwOyD/1FvjBLBuTDp6nOFRx12",
-    "name": "William Lopes Rodrigues",
-    "userType": "ong",
-    "phone": "11948033337",
-    "address": "Rua teste",
-    "createdAt": "2026-01-16T14:28:51.153Z"
-  },
-  {
-    "id": "1768574119686",
-    "email": "flavia@teste.com",
-    "password": "$2b$10$yXzbAiHbzXYfmvioTTsFQ.rXmbpZ9iRw2/Cg5nWmV1GPnHBIMtgji",
-    "name": "Flavia",
-    "userType": "cliente",
-    "phone": "1199946485",
-    "address": "Rua teste",
-    "createdAt": "2026-01-16T14:35:19.686Z"
-  },
-  {
-    "id": "1768574221342",
-    "email": "jovem@teste.com",
-    "password": "$2b$10$eZQIrlRJuih3Fv0CJX6kW.pe2AS2F079ssWD4sZA15pY3sWh4amRC",
-    "name": "jovem",
-    "userType": "jovem",
-    "phone": "1184384834",
-    "address": "teste",
-    "createdAt": "2026-01-16T14:37:01.342Z"
-  },
-  {
-    "id": "1768645638935",
-    "email": "ui@ui.com",
-    "password": "$2b$10$86QpGOLzdSflAfew5Gcx3uzYztDQgr91ZE6wMjfq6L966Zr1bF95m",
-    "name": "Ui",
-    "userType": "cliente",
-    "phone": "1154348780",
-    "address": "Hehehe",
-    "createdAt": "2026-01-17T10:27:18.935Z"
   }
 ]

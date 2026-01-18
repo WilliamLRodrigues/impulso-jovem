@@ -35,4 +35,36 @@ router.post('/documents', authenticateToken, upload.array('documents', 5), (req,
   });
 });
 
+// Upload de foto do jovem
+router.post('/photo', authenticateToken, upload.single('photo'), (req, res) => {
+  if (!req.file) {
+    return res.status(400).json({ error: 'Nenhuma foto foi enviada' });
+  }
+  
+  res.json({
+    message: 'Foto enviada com sucesso',
+    filename: req.file.filename,
+    path: `/uploads/${req.file.filename}`,
+    size: req.file.size
+  });
+});
+
+// Upload de fotos do serviço (cliente)
+router.post('/service-photos', authenticateToken, upload.array('photos', 10), (req, res) => {
+  if (!req.files || req.files.length === 0) {
+    return res.status(400).json({ error: 'Nenhuma foto foi enviada' });
+  }
+  
+  const photos = req.files.map(file => ({
+    filename: file.filename,
+    url: `/uploads/${file.filename}`,
+    size: file.size
+  }));
+  
+  res.json({
+    message: 'Fotos enviadas com sucesso',
+    photos: photos
+  });
+});
+
 module.exports = router;

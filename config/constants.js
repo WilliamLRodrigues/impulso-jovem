@@ -19,9 +19,12 @@ module.exports = {
 
   BOOKING_STATUS: {
     PENDING: 'pending',
+    ASSIGNED: 'assigned',
     CONFIRMED: 'confirmed',
+    CHECKED_IN: 'checked_in',
     IN_PROGRESS: 'in_progress',
     COMPLETED: 'completed',
-    CANCELLED: 'cancelled'
+    CANCELLED: 'cancelled',
+    REJECTED: 'rejected'
   }
 };

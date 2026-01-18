@@ -14,6 +14,7 @@ const bookingRoutes = require('./routes/bookings');
 const reviewRoutes = require('./routes/reviews');
 const adminRoutes = require('./routes/admin');
 const uploadRoutes = require('./routes/upload');
+const assetsRoutes = require('./routes/assets');
 
 const app = express();
 
@@ -70,8 +71,17 @@ app.use('/api/bookings', bookingRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/upload', uploadRoutes);
+app.use('/api/assets', assetsRoutes);
 
-// Health check
+// Health check (múltiplas rotas para compatibilidade)
+app.get('/health', (req, res) => {
+  res.json({
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+    service: 'Impulso Jovem API'
+  });
+});
+
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'ok',
