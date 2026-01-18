@@ -164,5 +164,399 @@
       "/uploads/photos-1768771175579-737160525.jpg"
     ],
     "finalPrice": 50
+  },
+  {
+    "id": "1768772181525",
+    "serviceId": "service001",
+    "clientId": "1768770332807",
+    "jovemId": "1768770289856",
+    "serviceName": "Limpeza Básica",
+    "date": "2026-01-20",
+    "time": "11:00",
+    "duration": 2,
+    "status": "cancelled",
+    "clientDescription": "dsds",
+    "clientPhotos": [],
+    "serviceCategory": "Limpeza",
+    "jovemName": "Joao",
+    "jovemPhoto": "/uploads/photo-1768770222304-565395353.png",
+    "jovemStats": {
+      "completedServices": 4,
+      "rating": 3.75,
+      "points": 150,
+      "totalEarnings": 200
+    },
+    "ongId": "1768770209612",
+    "autoAssigned": true,
+    "recommendedJovens": [
+      {
+        "id": "1768770289856",
+        "name": "Joao",
+        "rating": 3.75,
+        "completedServices": 4,
+        "ongId": "1768770209612",
+        "available": true
+      }
+    ],
+    "createdAt": "2026-01-18T21:36:21.525Z",
+    "acceptedBy": "jovem",
+    "acceptedAt": "2026-01-18T21:49:41.695Z",
+    "checkInPin": "4207",
+    "checkInPinGeneratedAt": "2026-01-18T21:49:41.695Z",
+    "cancellationReason": "naoq uero mais",
+    "cancelledBy": "client",
+    "cancelledAt": "2026-01-18T22:08:19.513Z"
+  },
+  {
+    "id": "1768774085632",
+    "serviceId": "service006",
+    "clientId": "1768770332807",
+    "jovemId": "1768773920909",
+    "serviceName": "Lavagem de Carro",
+    "date": "2026-01-20",
+    "time": "11:00",
+    "duration": 1,
+    "status": "cancelled",
+    "clientDescription": "preciso lavar meu carro",
+    "clientPhotos": [
+      "/uploads/photos-1768774085620-39491666.jpg"
+    ],
+    "serviceCategory": "Automotivo",
+    "jovemName": "João Neto",
+    "jovemPhoto": "/uploads/photo-1768773857942-951251733.png",
+    "jovemStats": {
+      "completedServices": 0,
+      "rating": 0,
+      "points": 0
+    },
+    "ongId": "1768770209612",
+    "autoAssigned": true,
+    "recommendedJovens": [
+      {
+        "id": "1768773920909",
+        "name": "João Neto",
+        "rating": 0,
+        "completedServices": 0,
+        "ongId": "1768770209612",
+        "available": true
+      }
+    ],
+    "createdAt": "2026-01-18T22:08:05.632Z",
+    "acceptedBy": "jovem",
+    "acceptedAt": "2026-01-18T22:09:09.089Z",
+    "checkInPin": "7007",
+    "checkInPinGeneratedAt": "2026-01-18T22:09:09.089Z",
+    "cancellationReason": "nao quero mais",
+    "cancelledBy": "client",
+    "cancelledAt": "2026-01-18T22:09:59.292Z"
+  },
+  {
+    "id": "1768774220788",
+    "serviceId": "service004",
+    "clientId": "1768770332807",
+    "jovemId": "1768773920909",
+    "serviceName": "Organização de Ambientes",
+    "date": "2026-01-20",
+    "time": "11:00",
+    "duration": 2,
+    "status": "completed",
+    "clientDescription": "quero organizar a casa",
+    "clientPhotos": [],
+    "serviceCategory": "Organização",
+    "jovemName": "João Neto",
+    "jovemPhoto": "/uploads/photo-1768773857942-951251733.png",
+    "jovemStats": {
+      "completedServices": 0,
+      "rating": 0,
+      "points": 0
+    },
+    "ongId": "1768770209612",
+    "autoAssigned": true,
+    "recommendedJovens": [
+      {
+        "id": "1768773920909",
+        "name": "João Neto",
+        "rating": 0,
+        "completedServices": 0,
+        "ongId": "1768770209612",
+        "available": true
+      }
+    ],
+    "createdAt": "2026-01-18T22:10:20.788Z",
+    "acceptedBy": "jovem",
+    "acceptedAt": "2026-01-18T22:10:35.376Z",
+    "checkInPin": "8967",
+    "checkInPinGeneratedAt": "2026-01-18T22:10:35.376Z",
+    "checkInTime": "2026-01-18T22:10:55.446Z",
+    "completedAt": "2026-01-18T22:12:29.476Z",
+    "rating": 5,
+    "clientReview": "Excelente",
+    "completedPhotos": [
+      "/api/assets/uploads/photos-1768774346973-332533408.jpg"
+    ],
+    "finalPrice": 50
+  },
+  {
+    "id": "1768774506100",
+    "serviceId": "service001",
+    "clientId": "1768770332807",
+    "jovemId": "1768773920909",
+    "serviceName": "Limpeza Básica",
+    "date": "2026-01-21",
+    "time": "12:00",
+    "duration": 2,
+    "status": "completed",
+    "clientDescription": "Limpeza",
+    "clientPhotos": [
+      "/uploads/photos-1768774506076-639727124.png"
+    ],
+    "serviceCategory": "Limpeza",
+    "jovemName": "João Neto",
+    "jovemPhoto": "/uploads/photo-1768773857942-951251733.png",
+    "jovemStats": {
+      "completedServices": 1,
+      "rating": 5,
+      "points": 50,
+      "totalEarnings": 50
+    },
+    "ongId": "1768770209612",
+    "autoAssigned": true,
+    "recommendedJovens": [
+      {
+        "id": "1768773920909",
+        "name": "João Neto",
+        "rating": 5,
+        "completedServices": 1,
+        "ongId": "1768770209612",
+        "available": true
+      }
+    ],
+    "createdAt": "2026-01-18T22:15:06.100Z",
+    "acceptedBy": "jovem",
+    "acceptedAt": "2026-01-18T22:15:17.450Z",
+    "checkInPin": "9131",
+    "checkInPinGeneratedAt": "2026-01-18T22:15:17.450Z",
+    "checkInTime": "2026-01-18T22:15:29.456Z",
+    "completedAt": "2026-01-18T22:17:43.442Z",
+    "rating": 5,
+    "clientReview": "ótimo",
+    "completedPhotos": [
+      "/uploads/photos-1768774660420-178102873.jpg"
+    ],
+    "finalPrice": 50
+  },
+  {
+    "id": "1768775319194",
+    "serviceId": "service006",
+    "clientId": "1768775279143",
+    "jovemId": "1768773920909",
+    "serviceName": "Lavagem de Carro",
+    "date": "2026-01-20",
+    "time": "13:00",
+    "duration": 1,
+    "status": "completed",
+    "clientDescription": "Preciso por favor lavar meu carro",
+    "clientPhotos": [
+      "/uploads/photos-1768775319181-573925562.png"
+    ],
+    "serviceCategory": "Automotivo",
+    "jovemName": "João Neto",
+    "jovemPhoto": "/uploads/photo-1768773857942-951251733.png",
+    "jovemStats": {
+      "completedServices": 2,
+      "rating": 5,
+      "points": 100,
+      "totalEarnings": 100
+    },
+    "ongId": "1768770209612",
+    "autoAssigned": true,
+    "recommendedJovens": [
+      {
+        "id": "1768773920909",
+        "name": "João Neto",
+        "rating": 5,
+        "completedServices": 2,
+        "ongId": "1768770209612",
+        "available": true
+      }
+    ],
+    "createdAt": "2026-01-18T22:28:39.194Z",
+    "acceptedBy": "jovem",
+    "acceptedAt": "2026-01-18T22:34:56.651Z",
+    "checkInPin": "7408",
+    "checkInPinGeneratedAt": "2026-01-18T22:34:56.651Z",
+    "checkInTime": "2026-01-18T22:51:24.880Z",
+    "completedAt": "2026-01-18T22:56:05.204Z",
+    "rating": 5,
+    "clientReview": "Excelente",
+    "completedPhotos": [
+      "/uploads/photos-1768776963641-466086551.png"
+    ],
+    "finalPrice": 50
+  },
+  {
+    "id": "1768776122577",
+    "serviceId": "service001",
+    "clientId": "1768775279143",
+    "jovemId": null,
+    "serviceName": "Limpeza Básica",
+    "date": "2026-01-21",
+    "time": "11:00",
+    "duration": 2,
+    "status": "cancelled",
+    "clientDescription": "Limpar",
+    "clientPhotos": [],
+    "serviceCategory": "Limpeza",
+    "jovemName": "João Neto",
+    "jovemPhoto": "/uploads/photo-1768773857942-951251733.png",
+    "jovemStats": {
+      "completedServices": 2,
+      "rating": 5,
+      "points": 100,
+      "totalEarnings": 100
+    },
+    "ongId": "1768770209612",
+    "autoAssigned": true,
+    "recommendedJovens": [],
+    "createdAt": "2026-01-18T22:42:02.577Z",
+    "rejectedBy": "1768773920909",
+    "rejectionReason": "Nao consigo.",
+    "rejectedAt": "2026-01-18T22:43:09.637Z",
+    "rejections": [
+      {
+        "jovemId": "1768773920909",
+        "reason": "Não será posivel",
+        "rejectedAt": "2026-01-18T22:44:11.008Z"
+      }
+    ],
+    "cancelledBy": "jovem",
+    "cancelReason": "Nao consigo."
+  },
+  {
+    "id": "1768776566550",
+    "serviceId": "service001",
+    "clientId": "1768775279143",
+    "jovemId": "1768773920909",
+    "serviceName": "Limpeza Básica",
+    "date": "2026-01-21",
+    "time": "12:00",
+    "duration": 2,
+    "status": "cancelled",
+    "clientDescription": "TEste",
+    "clientPhotos": [],
+    "serviceCategory": "Limpeza",
+    "jovemName": "João Neto",
+    "jovemPhoto": "/uploads/photo-1768773857942-951251733.png",
+    "jovemStats": {
+      "completedServices": 2,
+      "rating": 5,
+      "points": 100,
+      "totalEarnings": 100
+    },
+    "ongId": "1768770209612",
+    "autoAssigned": true,
+    "recommendedJovens": [
+      {
+        "id": "1768773920909",
+        "name": "João Neto",
+        "rating": 5,
+        "completedServices": 2,
+        "ongId": "1768770209612",
+        "available": true
+      }
+    ],
+    "createdAt": "2026-01-18T22:49:26.550Z",
+    "cancelledBy": "jovem",
+    "cancelReason": "não vai dar",
+    "rejectedBy": "1768773920909",
+    "rejectionReason": "não vai dar",
+    "rejectedAt": "2026-01-18T22:49:44.576Z"
+  },
+  {
+    "id": "1768776602201",
+    "serviceId": "service001",
+    "clientId": "1768775279143",
+    "jovemId": "1768773920909",
+    "serviceName": "Limpeza Básica",
+    "date": "2026-01-20",
+    "time": "10:00",
+    "duration": 2,
+    "status": "cancelled",
+    "clientDescription": "Teste2",
+    "clientPhotos": [],
+    "serviceCategory": "Limpeza",
+    "jovemName": "João Neto",
+    "jovemPhoto": "/uploads/photo-1768773857942-951251733.png",
+    "jovemStats": {
+      "completedServices": 2,
+      "rating": 5,
+      "points": 100,
+      "totalEarnings": 100
+    },
+    "ongId": "1768770209612",
+    "autoAssigned": true,
+    "recommendedJovens": [
+      {
+        "id": "1768773920909",
+        "name": "João Neto",
+        "rating": 5,
+        "completedServices": 2,
+        "ongId": "1768770209612",
+        "available": true
+      }
+    ],
+    "createdAt": "2026-01-18T22:50:02.201Z",
+    "cancelledBy": "jovem",
+    "cancelReason": "Não",
+    "rejectedBy": "1768773920909",
+    "rejectionReason": "Não",
+    "rejectedAt": "2026-01-18T22:50:23.677Z"
+  },
+  {
+    "id": "1768777044744",
+    "serviceId": "service001",
+    "clientId": "1768775279143",
+    "jovemId": "1768773920909",
+    "serviceName": "Limpeza Básica",
+    "date": "2026-01-20",
+    "time": "10:00",
+    "duration": 2,
+    "status": "completed",
+    "clientDescription": "TEste",
+    "clientPhotos": [],
+    "serviceCategory": "Limpeza",
+    "jovemName": "João Neto",
+    "jovemPhoto": "/uploads/photo-1768773857942-951251733.png",
+    "jovemStats": {
+      "completedServices": 3,
+      "rating": 5,
+      "points": 150,
+      "totalEarnings": 150
+    },
+    "ongId": "1768770209612",
+    "autoAssigned": true,
+    "recommendedJovens": [
+      {
+        "id": "1768773920909",
+        "name": "João Neto",
+        "rating": 5,
+        "completedServices": 3,
+        "ongId": "1768770209612",
+        "available": true
+      }
+    ],
+    "createdAt": "2026-01-18T22:57:24.744Z",
+    "acceptedBy": "jovem",
+    "acceptedAt": "2026-01-18T22:57:39.940Z",
+    "checkInPin": "6646",
+    "checkInPinGeneratedAt": "2026-01-18T22:57:39.940Z",
+    "checkInTime": "2026-01-18T22:58:05.663Z",
+    "completedAt": "2026-01-18T22:58:17.452Z",
+    "rating": 5,
+    "clientReview": ";ótimo",
+    "completedPhotos": [
+      "/uploads/photos-1768777096064-525910773.png"
+    ],
+    "finalPrice": 50
   }
 ]

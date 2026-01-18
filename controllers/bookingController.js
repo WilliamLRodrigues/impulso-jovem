@@ -173,6 +173,8 @@ const createBooking = (req, res) => {
     serviceCategory: service.category,
     jovemId: assignedJovem ? assignedJovem.id : null,
     jovemName: assignedJovem ? assignedJovem.name : null,
+    jovemPhoto: assignedJovem ? assignedJovem.photo : null,
+    jovemStats: assignedJovem ? assignedJovem.stats : null,
     ongId: assignedJovem ? assignedJovem.ongId : null,
     autoAssigned: !!assignedJovem,
     recommendedJovens: sortedJovens.slice(0, 5).map(j => ({
@@ -514,9 +516,16 @@ const acceptBookingByJovem = (req, res) => {
   // Gerar PIN automaticamente ao aceitar
   const checkInPin = Math.floor(1000 + Math.random() * 9000).toString();
   
+  // Buscar dados do jovem para adicionar ao booking
+  const jovens = readDB(FILES.jovens);
+  const jovem = jovens.find(j => j.id === jovemId);
+  
   bookings[index] = {
     ...booking,
     jovemId: jovemId,
+    jovemName: jovem ? jovem.name : booking.jovemName,
+    jovemPhoto: jovem ? jovem.photo : null,
+    jovemStats: jovem ? jovem.stats : null,
     status: 'confirmed',
     acceptedBy: 'jovem',
     acceptedAt: new Date().toISOString(),
@@ -528,9 +537,7 @@ const acceptBookingByJovem = (req, res) => {
   
   // Enviar email notificando cliente que jovem aceitou
   const users = readDB(FILES.users);
-  const jovens = readDB(FILES.jovens);
   const client = users.find(u => u.id === booking.clientId);
-  const jovem = jovens.find(j => j.id === jovemId);
   
   if (client && client.email && jovem) {
     sendJovemAcceptedNotification(
@@ -568,12 +575,13 @@ const rejectBookingByJovem = (req, res) => {
     return res.status(403).json({ error: 'Você não está autorizado a rejeitar este agendamento' });
   }
   
-  // Se era o jovem atribuído, remover atribuição e voltar para pending
+  // Se era o jovem atribuído, cancelar o agendamento
   if (isAssigned) {
     bookings[index] = {
       ...booking,
-      jovemId: null,
-      status: 'pending',
+      status: 'cancelled',
+      cancelledBy: 'jovem',
+      cancelReason: reason || 'Jovem recusou o serviço',
       rejectedBy: jovemId,
       rejectionReason: reason,
       rejectedAt: new Date().toISOString()

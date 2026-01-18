@@ -48,5 +48,57 @@
       "/uploads/photos-1768771175579-737160525.jpg"
     ],
     "createdAt": "2026-01-18T21:19:41.755Z"
+  },
+  {
+    "id": "1768774349476",
+    "bookingId": "1768774220788",
+    "serviceId": "service004",
+    "jovemId": "1768773920909",
+    "clientId": "1768770332807",
+    "rating": 5,
+    "comment": "Excelente",
+    "photos": [
+      "/api/assets/uploads/photos-1768774346973-332533408.jpg"
+    ],
+    "createdAt": "2026-01-18T22:12:29.476Z"
+  },
+  {
+    "id": "1768774663442",
+    "bookingId": "1768774506100",
+    "serviceId": "service001",
+    "jovemId": "1768773920909",
+    "clientId": "1768770332807",
+    "rating": 5,
+    "comment": "ótimo",
+    "photos": [
+      "/uploads/photos-1768774660420-178102873.jpg"
+    ],
+    "createdAt": "2026-01-18T22:17:43.442Z"
+  },
+  {
+    "id": "1768776965204",
+    "bookingId": "1768775319194",
+    "serviceId": "service006",
+    "jovemId": "1768773920909",
+    "clientId": "1768775279143",
+    "rating": 5,
+    "comment": "Excelente",
+    "photos": [
+      "/uploads/photos-1768776963641-466086551.png"
+    ],
+    "createdAt": "2026-01-18T22:56:05.204Z"
+  },
+  {
+    "id": "1768777097452",
+    "bookingId": "1768777044744",
+    "serviceId": "service001",
+    "jovemId": "1768773920909",
+    "clientId": "1768775279143",
+    "rating": 5,
+    "comment": ";ótimo",
+    "photos": [
+      "/uploads/photos-1768777096064-525910773.png"
+    ],
+    "createdAt": "2026-01-18T22:58:17.452Z"
   }
 ]

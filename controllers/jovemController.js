@@ -133,6 +133,9 @@ const updateJovem = (req, res) => {
 // Excluir jovem
 const deleteJovem = (req, res) => {
   const jovens = readDB(FILES.jovens);
+  const users = readDB(FILES.users);
+  const bookings = readDB(FILES.bookings);
+  
   const index = jovens.findIndex(j => j.id === req.params.id);
   if (index === -1) return res.status(404).json({ error: 'Jovem não encontrado' });
 
@@ -156,8 +159,23 @@ const deleteJovem = (req, res) => {
   jovens.splice(index, 1);
   writeDB(FILES.jovens, jovens);
   
-  console.log(`🗑️ Jovem ${deletedJovem.name} (ID: ${deletedJovem.id}) excluído com sucesso`);
-  res.json({ message: 'Jovem e arquivos excluídos com sucesso', jovem: deletedJovem });
+  // Remover usuário associado do sistema de autenticação
+  const userIndex = users.findIndex(u => u.id === req.params.id);
+  if (userIndex !== -1) {
+    users.splice(userIndex, 1);
+    writeDB(FILES.users, users);
+    console.log(`🗑️ Usuário de autenticação removido para jovem ${deletedJovem.name}`);
+  }
+  
+  // Remover ou cancelar agendamentos associados ao jovem
+  const updatedBookings = bookings.filter(b => b.jovemId !== req.params.id);
+  if (updatedBookings.length !== bookings.length) {
+    writeDB(FILES.bookings, updatedBookings);
+    console.log(`🗑️ Agendamentos do jovem ${deletedJovem.name} removidos`);
+  }
+  
+  console.log(`🗑️ Jovem ${deletedJovem.name} (ID: ${deletedJovem.id}) excluído completamente do sistema`);
+  res.json({ message: 'Jovem, arquivos e dados associados excluídos com sucesso', jovem: deletedJovem });
 };
 
 // Resetar senha do jovem (pela ONG)

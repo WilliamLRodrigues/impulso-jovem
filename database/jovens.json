@@ -1,32 +1,30 @@
 [
   {
-    "id": "1768770289856",
-    "userId": "1768770289856",
-    "name": "Joao",
+    "id": "1768773920909",
+    "userId": "1768773920909",
+    "name": "João Neto",
     "email": "jovem@impulso.com",
-    "phone": "1132432432",
-    "birthDate": "1997-05-16",
-    "cpf": "4342344324325",
-    "rg": "43243224324",
-    "address": "Rua Jose Adorno, 20",
+    "phone": "119480739453",
+    "birthDate": "1997-02-16",
+    "cpf": "35676545667",
+    "rg": "336455647",
+    "address": "Rua Jose Adorno, 10",
     "country": "Brasil",
     "state": "SP",
     "city": "São Paulo",
-    "photo": "/uploads/photo-1768770222304-565395353.png",
-    "description": "Quero Crescer",
+    "photo": "/uploads/photo-1768773857942-951251733.png",
+    "description": "Quero oportunidade de emprego para me desenvolver no mercado de trabalho.",
     "skills": [
-      "service001",
-      "service002",
-      "service003",
-      "service004"
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
     ],
-    "documents": [
-      {
-        "name": "Impulsologo.png",
-        "path": "/uploads/document-1768770286424-224591895.png",
-        "size": 997811
-      }
-    ],
+    "documents": [],
     "workingSchedule": {
       "segunda-feira": {
         "enabled": true,
@@ -69,10 +67,10 @@
     "availability": true,
     "stats": {
       "completedServices": 4,
-      "rating": 3.75,
-      "points": 150,
+      "rating": 5,
+      "points": 200,
       "totalEarnings": 200
     },
-    "createdAt": "2026-01-18T21:04:49.857Z"
+    "createdAt": "2026-01-18T22:05:20.921Z"
   }
 ]

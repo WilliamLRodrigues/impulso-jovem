@@ -6,7 +6,7 @@ const { SECRET_KEY } = require('../config/constants');
 // Registro
 const register = async (req, res) => {
   try {
-    const { email, password, name, userType, phone, address } = req.body;
+    const { email, password, name, userType, phone, address, city, state, country, complement, cep, cnpj } = req.body;
     const users = readDB(FILES.users);
 
     // Validar que jovens não podem se cadastrar diretamente
@@ -35,6 +35,12 @@ const register = async (req, res) => {
       userType, // 'admin', 'ong', 'cliente'
       phone,
       address,
+      city,
+      state,
+      country,
+      complement,
+      cep,
+      cnpj,
       createdAt: new Date().toISOString()
     };
 
@@ -50,6 +56,12 @@ const register = async (req, res) => {
         name,
         address,
         phone,
+        city,
+        state,
+        country,
+        complement,
+        cep,
+        cnpj,
         services: [],
         jovens: [],
         stats: { totalServices: 0, activeJovens: 0, rating: 0 }
