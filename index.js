@@ -57,7 +57,13 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 // Servir arquivos estáticos da pasta uploads
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+const uploadsPath = path.join(__dirname, 'uploads');
+// Criar pasta uploads se não existir
+if (!require('fs').existsSync(uploadsPath)) {
+  require('fs').mkdirSync(uploadsPath, { recursive: true });
+  console.log('📁 Pasta uploads criada');
+}
+app.use('/uploads', express.static(uploadsPath));
 
 // Inicializar banco de dados
 initDatabase();
