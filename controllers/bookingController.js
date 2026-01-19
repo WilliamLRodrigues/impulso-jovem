@@ -4,6 +4,40 @@ const { sendBookingConfirmation, sendJovemAcceptedNotification, sendThankYouEmai
 const fs = require('fs');
 const path = require('path');
 
+const normalizeTrainingKey = (value = '') =>
+  value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+    .replace(/\s+/g, '_');
+
+const trainingAliases = {
+  limpeza_basica: ['Limpeza Básica', 'Limpeza', 'Limpeza Geral'],
+  jardinagem: ['Jardinagem', 'Cuidados com Jardim'],
+  pintura_parede: ['Pintura de Parede', 'Pintura'],
+  organizacao_ambientes: ['Organização de Ambientes', 'Organizacao', 'Organizar Ambientes', 'Organização'],
+  manutencao_eletrica_basica: ['Manutenção Elétrica Básica', 'Eletricidade Básica', 'Elétrica', 'Eletrica'],
+  lavagem_carro: ['Lavagem de Carro', 'Lavagem', 'Automotivo'],
+  montagem_moveis: ['Montagem de Móveis', 'Montagem'],
+  passeio_pets: ['Passeio com Pets', 'Passeio Pet', 'Dog Walker', 'Pets'],
+};
+
+const trainingAliasLookup = Object.entries(trainingAliases).reduce((acc, [key, aliases]) => {
+  aliases.forEach((alias) => {
+    acc[normalizeTrainingKey(alias)] = key;
+  });
+  return acc;
+}, {});
+
+const resolveTrainingModuleKey = (name = '', category = '') => {
+  const normalizedName = normalizeTrainingKey(name);
+  const normalizedCategory = normalizeTrainingKey(category);
+
+  return trainingAliasLookup[normalizedName] || trainingAliasLookup[normalizedCategory] || null;
+};
+
 // Função para calcular preço com margem de lucro
 const calculatePriceWithMargin = (basePrice) => {
   try {
@@ -589,6 +623,8 @@ const getAvailableServicesForClient = (req, res) => {
     .filter(s => s.status === 'available')
     .map(service => {
       console.log(`\n📦 Processando serviço: ${service.id} - ${service.title}`);
+
+      const trainingModuleKey = resolveTrainingModuleKey(service.title, service.category);
       
       // Encontrar jovens que podem fazer este serviço na área do cliente
       const availableJovens = jovens.filter(j => {
@@ -604,6 +640,13 @@ const getAvailableServicesForClient = (req, res) => {
         if (!hasSkill) {
           console.log(`  ❌ Jovem ${j.id} - não tem skill necessária`);
           return false;
+        }
+        if (trainingModuleKey) {
+          const hasTraining = Boolean(j.trainingCompletion && j.trainingCompletion[trainingModuleKey]);
+          if (!hasTraining) {
+            console.log(`  ❌ Jovem ${j.id} - treinamento pendente (${trainingModuleKey})`);
+            return false;
+          }
         }
         console.log(`  ✅ Jovem ${j.id} - elegível`);
         return true;
@@ -934,7 +977,7 @@ const completeServiceByClient = (req, res) => {
       completedServices: totalServices,
       rating: parseFloat(newAverageRating.toFixed(2)),
       points: (currentStats.points || 0) + (rating * 10), // 10 pontos por estrela
-      totalEarnings: (currentStats.totalEarnings || 0) + servicePrice
+      totalEarnings: (currentStats.totalEarnings || 0) + finalPrice
     };
   }
   
@@ -964,7 +1007,7 @@ const completeServiceByClient = (req, res) => {
     success: true, 
     message: 'Serviço finalizado com sucesso!',
     booking: bookings[index],
-    earnings: servicePrice
+    earnings: finalPrice
   });
 };
 

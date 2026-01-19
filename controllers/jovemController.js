@@ -63,6 +63,7 @@ const createJovem = async (req, res) => {
       userId: newUser.id,
       ...req.body,
       createdAt: new Date().toISOString(),
+      trainingCompletion: {},
       stats: {
         completedServices: 0,
         rating: 0,

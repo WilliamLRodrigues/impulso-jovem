@@ -66,11 +66,91 @@
     "age": 28,
     "availability": true,
     "stats": {
-      "completedServices": 4,
-      "rating": 5,
-      "points": 200,
-      "totalEarnings": 200
+      "completedServices": 5,
+      "rating": 4.8,
+      "points": 240,
+      "totalEarnings": 265
     },
-    "createdAt": "2026-01-18T22:05:20.921Z"
+    "createdAt": "2026-01-18T22:05:20.921Z",
+    "trainingCompletion": {
+      "pintura_parede": true
+    }
+  },
+  {
+    "id": "1768863593424",
+    "userId": "1768863593424",
+    "name": "teste",
+    "email": "jovem2@impulso.com",
+    "phone": "118374783",
+    "birthDate": "1997-03-12",
+    "cpf": "44789364890",
+    "rg": "336744678",
+    "address": "Rua Jose Adorno, 402",
+    "country": "Brasil",
+    "state": "SP",
+    "city": "São Paulo",
+    "photo": "",
+    "description": "Aprender",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Organização",
+      "Elétrica",
+      "Automotivo",
+      "Montagem",
+      "Pets"
+    ],
+    "documents": [],
+    "workingSchedule": {
+      "segunda-feira": {
+        "enabled": false,
+        "start": "08:00",
+        "end": "18:00"
+      },
+      "terça-feira": {
+        "enabled": false,
+        "start": "08:00",
+        "end": "18:00"
+      },
+      "quarta-feira": {
+        "enabled": false,
+        "start": "08:00",
+        "end": "18:00"
+      },
+      "quinta-feira": {
+        "enabled": false,
+        "start": "08:00",
+        "end": "18:00"
+      },
+      "sexta-feira": {
+        "enabled": false,
+        "start": "08:00",
+        "end": "18:00"
+      },
+      "sábado": {
+        "enabled": false,
+        "start": "08:00",
+        "end": "18:00"
+      },
+      "domingo": {
+        "enabled": false,
+        "start": "08:00",
+        "end": "18:00"
+      }
+    },
+    "ongId": "1768770209612",
+    "age": 28,
+    "availability": true,
+    "stats": {
+      "completedServices": 0,
+      "rating": 0,
+      "points": 0
+    },
+    "createdAt": "2026-01-19T22:59:53.425Z",
+    "trainingCompletion": {
+      "lavagem_carro": true,
+      "jardinagem": true
+    }
   }
 ]

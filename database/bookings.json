@@ -602,5 +602,93 @@
     "cancellationReason": "Cancelar",
     "cancelledBy": "client",
     "cancelledAt": "2026-01-19T18:44:43.484Z"
+  },
+  {
+    "id": "1768865389282",
+    "serviceId": "service001",
+    "clientId": "1768770332807",
+    "jovemId": "1768773920909",
+    "serviceName": "Limpeza Básica",
+    "date": "2026-01-21",
+    "time": "11:00",
+    "duration": 2,
+    "status": "cancelled",
+    "clientDescription": "teste",
+    "clientPhotos": [
+      "/uploads/photos-1768865389274-680923701.jpg"
+    ],
+    "serviceCategory": "Limpeza",
+    "jovemName": "João Neto",
+    "jovemPhoto": "/uploads/photo-1768773857942-951251733.png",
+    "jovemStats": {
+      "completedServices": 4,
+      "rating": 5,
+      "points": 200,
+      "totalEarnings": 200
+    },
+    "ongId": "1768770209612",
+    "autoAssigned": true,
+    "recommendedJovens": [
+      {
+        "id": "1768773920909",
+        "name": "João Neto",
+        "rating": 5,
+        "completedServices": 4,
+        "ongId": "1768770209612",
+        "available": true
+      }
+    ],
+    "createdAt": "2026-01-19T23:29:49.282Z",
+    "cancelledBy": "jovem",
+    "cancelReason": "s",
+    "rejectedBy": "1768773920909",
+    "rejectionReason": "s",
+    "rejectedAt": "2026-01-19T23:50:26.611Z"
+  },
+  {
+    "id": "1768866801349",
+    "serviceId": "service003",
+    "clientId": "1768770332807",
+    "jovemId": "1768773920909",
+    "serviceName": "Pintura de Parede",
+    "date": "2026-01-21",
+    "time": "11:00",
+    "duration": 4,
+    "status": "completed",
+    "clientDescription": "Teste",
+    "clientPhotos": [],
+    "serviceCategory": "Pintura",
+    "jovemName": "João Neto",
+    "jovemPhoto": "/uploads/photo-1768773857942-951251733.png",
+    "jovemStats": {
+      "completedServices": 4,
+      "rating": 5,
+      "points": 200,
+      "totalEarnings": 200
+    },
+    "ongId": "1768770209612",
+    "autoAssigned": true,
+    "recommendedJovens": [
+      {
+        "id": "1768773920909",
+        "name": "João Neto",
+        "rating": 5,
+        "completedServices": 4,
+        "ongId": "1768770209612",
+        "available": true
+      }
+    ],
+    "createdAt": "2026-01-19T23:53:21.350Z",
+    "acceptedBy": "jovem",
+    "acceptedAt": "2026-01-19T23:53:43.742Z",
+    "checkInPin": "7536",
+    "checkInPinGeneratedAt": "2026-01-19T23:53:43.742Z",
+    "checkInTime": "2026-01-19T23:54:10.823Z",
+    "completedAt": "2026-01-19T23:57:10.827Z",
+    "rating": 4,
+    "clientReview": "ds",
+    "completedPhotos": [],
+    "basePrice": 50,
+    "finalPrice": 65
   }
 ]

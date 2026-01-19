@@ -75,5 +75,15 @@
     "cep": "",
     "cnpj": "",
     "createdAt": "2026-01-19T19:16:43.339Z"
+  },
+  {
+    "id": "1768863593424",
+    "email": "jovem2@impulso.com",
+    "password": "$2b$10$..DUMjJ8pCUdwuMnW/zNUO6LeD/Ia4YqxW2OSOIkTmZ4oROJ.GcPe",
+    "name": "teste",
+    "userType": "jovem",
+    "firstLogin": false,
+    "createdAt": "2026-01-19T22:59:53.424Z",
+    "updatedAt": "2026-01-19T23:00:38.451Z"
   }
 ]
