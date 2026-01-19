@@ -2,6 +2,8 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { readDB, writeDB, FILES } = require('../config/database');
 const { SECRET_KEY } = require('../config/constants');
+const { sendPasswordRecovery } = require('../services/emailService');
+
 
 // Registro
 const register = async (req, res) => {
@@ -208,10 +210,58 @@ const changePassword = async (req, res) => {
   }
 };
 
+// Recuperar senha
+const forgotPassword = async (req, res) => {
+  try {
+    const { email } = req.body;
+    
+    if (!email) {
+      return res.status(400).json({ error: 'Email é obrigatório' });
+    }
+    
+    const users = readDB(FILES.users);
+    const user = users.find(u => u.email === email);
+    
+    if (!user) {
+      // Por segurança, não informar se o usuário existe ou não
+      return res.json({ 
+        message: 'Se o email existir em nosso sistema, você receberá as instruções de recuperação.' 
+      });
+    }
+    
+    // Gerar nova senha temporária
+    const tempPassword = Math.random().toString(36).slice(-8) + Math.random().toString(36).slice(-8).toUpperCase();
+    
+    // Hash da nova senha
+    const hashedPassword = await bcrypt.hash(tempPassword, 10);
+    
+    // Atualizar no banco
+    const userIndex = users.findIndex(u => u.email === email);
+    users[userIndex].password = hashedPassword;
+    users[userIndex].firstLogin = true; // Marcar para trocar senha
+    users[userIndex].updatedAt = new Date().toISOString();
+    
+    writeDB(FILES.users, users);
+    
+    // Enviar email com a senha
+    await sendPasswordRecovery(user.email, user.name, tempPassword);
+    
+    console.log('✅ Senha recuperada para:', email);
+    
+    res.json({ 
+      message: 'Se o email existir em nosso sistema, você receberá as instruções de recuperação.' 
+    });
+  } catch (error) {
+    console.error('❌ Erro ao recuperar senha:', error);
+    res.status(500).json({ error: 'Erro ao processar recuperação de senha' });
+  }
+};
+
 module.exports = {
   register,
   login,
   getUserProfile,
   updateUserProfile,
-  changePassword
+  changePassword,
+  forgotPassword
 };

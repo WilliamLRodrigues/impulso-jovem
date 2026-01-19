@@ -8,7 +8,10 @@ const {
   createUser, 
   updateUser, 
   deleteUser,
-  exportReport 
+  exportReport,
+  getProfitMargin,
+  updateProfitMargin,
+  getProfitReport
 } = require('../controllers/adminController');
 
 router.get('/stats', authenticateToken, requireAdmin, getStats);
@@ -18,5 +21,8 @@ router.post('/users', authenticateToken, requireAdmin, createUser);
 router.put('/users/:id', authenticateToken, requireAdmin, updateUser);
 router.delete('/users/:id', authenticateToken, requireAdmin, deleteUser);
 router.get('/export', authenticateToken, requireAdmin, exportReport);
+router.get('/profit-margin', authenticateToken, requireAdmin, getProfitMargin);
+router.put('/profit-margin', authenticateToken, requireAdmin, updateProfitMargin);
+router.get('/profit-report', authenticateToken, requireAdmin, getProfitReport);
 
 module.exports = router;

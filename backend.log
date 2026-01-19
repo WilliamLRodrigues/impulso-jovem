@@ -1,0 +1,4142 @@
+⚠️ RESEND_API_KEY não configurada - Emails desabilitados em desenvolvimento
+🚀 Servidor Backend Impulso Jovem rodando!
+🌍 Ambiente: development
+📊 API disponível em: http://localhost:5001/api
+🏥 Health check: http://localhost:5001/api/health
+💻 Modo local - Acesse via proxy na porta 80 ou diretamente na 5001
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 20%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (20%): R$ 60.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (20%): R$ 96.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (20%): R$ 180.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (20%): R$ 72.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (20%): R$ 84.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (20%): R$ 48.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (20%): R$ 108.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (20%): R$ 36.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 20%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (20%): R$ 60.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (20%): R$ 96.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (20%): R$ 180.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (20%): R$ 72.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (20%): R$ 84.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (20%): R$ 48.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (20%): R$ 108.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (20%): R$ 36.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 20%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (20%): R$ 60.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (20%): R$ 96.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (20%): R$ 180.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (20%): R$ 72.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (20%): R$ 84.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (20%): R$ 48.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (20%): R$ 108.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (20%): R$ 36.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 20%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (20%): R$ 60.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (20%): R$ 96.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (20%): R$ 180.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (20%): R$ 72.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (20%): R$ 84.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (20%): R$ 48.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (20%): R$ 108.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (20%): R$ 36.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 20%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (20%): R$ 60.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (20%): R$ 96.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (20%): R$ 180.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (20%): R$ 72.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (20%): R$ 84.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (20%): R$ 48.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (20%): R$ 108.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (20%): R$ 36.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 20%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (20%): R$ 60.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (20%): R$ 96.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (20%): R$ 180.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (20%): R$ 72.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (20%): R$ 84.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (20%): R$ 48.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (20%): R$ 108.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (20%): R$ 36.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 20%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (20%): R$ 60.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (20%): R$ 96.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (20%): R$ 180.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (20%): R$ 72.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (20%): R$ 84.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (20%): R$ 48.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (20%): R$ 108.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (20%): R$ 36.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 20%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (20%): R$ 60.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (20%): R$ 96.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (20%): R$ 180.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (20%): R$ 72.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (20%): R$ 84.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (20%): R$ 48.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (20%): R$ 108.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (20%): R$ 36.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 20%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (20%): R$ 60.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (20%): R$ 96.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (20%): R$ 180.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (20%): R$ 72.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (20%): R$ 84.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (20%): R$ 48.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (20%): R$ 108.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (20%): R$ 36.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔐 Tentativa de login: { email: 'jovem@impulso.com', userExists: true }
+🔑 Comparação de senha: { passwordMatch: true, userType: 'jovem' }
+✅ Login bem-sucedido: { userId: '1768773920909', userType: 'jovem', firstLogin: false }
+🔍 Requisição de arquivo: photo-1768773857942-951251733.png
+📂 Caminho completo: /Users/erjer/Desktop/Impulso Jovem/backend/uploads/photo-1768773857942-951251733.png
+✅ Arquivo encontrado, enviando: photo-1768773857942-951251733.png
+🔐 Tentativa de login: { email: 'ong@impulso.com', userExists: true }
+🔑 Comparação de senha: { passwordMatch: true, userType: 'ong' }
+✅ Login bem-sucedido: { userId: '1768770209612', userType: 'ong', firstLogin: undefined }
+🔍 Requisição de arquivo: photo-1768773857942-951251733.png
+📂 Caminho completo: /Users/erjer/Desktop/Impulso Jovem/backend/uploads/photo-1768773857942-951251733.png
+✅ Arquivo encontrado, enviando: photo-1768773857942-951251733.png
+🔍 Requisição de arquivo: photo-1768773857942-951251733.png
+📂 Caminho completo: /Users/erjer/Desktop/Impulso Jovem/backend/uploads/photo-1768773857942-951251733.png
+✅ Arquivo encontrado, enviando: photo-1768773857942-951251733.png
+🔐 Tentativa de login: { email: 'swatusao2@gmail.com', userExists: true }
+🔑 Comparação de senha: { passwordMatch: false, userType: 'cliente' }
+❌ Senha incorreta
+🔐 Tentativa de login: { email: 'swatusao2@gmail.com', userExists: true }
+🔑 Comparação de senha: { passwordMatch: false, userType: 'cliente' }
+❌ Senha incorreta
+🔐 Tentativa de login: { email: 'swatusao2@gmail.com', userExists: true }
+🔑 Comparação de senha: { passwordMatch: false, userType: 'cliente' }
+❌ Senha incorreta
+🔐 Tentativa de login: { email: 'swatusao2@gmail.com', userExists: true }
+🔑 Comparação de senha: { passwordMatch: false, userType: 'cliente' }
+❌ Senha incorreta
+🔐 Tentativa de login: { email: 'cliente@impulso.com', userExists: true }
+🔑 Comparação de senha: { passwordMatch: true, userType: 'cliente' }
+✅ Login bem-sucedido: { userId: '1768770332807', userType: 'cliente', firstLogin: undefined }
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔐 Tentativa de login: { email: 'admin@impulso.com', userExists: true }
+🔑 Comparação de senha: { passwordMatch: true, userType: 'admin' }
+✅ Login bem-sucedido: { userId: 'admin001', userType: 'admin', firstLogin: undefined }
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔍 Buscando serviços disponíveis para clientId: 1768770332807
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'SP', city: 'São Paulo' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 50.00 → Com margem (30%): R$ 65.00
+
+📦 Processando serviço: service002 - Jardinagem
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 80.00 → Com margem (30%): R$ 104.00
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 150.00 → Com margem (30%): R$ 195.00
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 60.00 → Com margem (30%): R$ 78.00
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 70.00 → Com margem (30%): R$ 91.00
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 40.00 → Com margem (30%): R$ 52.00
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 90.00 → Com margem (30%): R$ 117.00
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ✅ Jovem 1768773920909 - elegível
+  📊 Total jovens elegíveis: 1
+  💰 Preço base: R$ 30.00 → Com margem (30%): R$ 39.00
+
+✅ Total de serviços disponíveis para retornar: 8
+🔐 Tentativa de login: { email: 'ong@impulso.com', userExists: true }
+🔑 Comparação de senha: { passwordMatch: true, userType: 'ong' }
+✅ Login bem-sucedido: { userId: '1768770209612', userType: 'ong', firstLogin: undefined }
+🔍 Requisição de arquivo: photo-1768773857942-951251733.png
+📂 Caminho completo: /Users/erjer/Desktop/Impulso Jovem/backend/uploads/photo-1768773857942-951251733.png
+✅ Arquivo encontrado, enviando: photo-1768773857942-951251733.png
+🔍 Requisição de arquivo: photo-1768773857942-951251733.png
+📂 Caminho completo: /Users/erjer/Desktop/Impulso Jovem/backend/uploads/photo-1768773857942-951251733.png
+✅ Arquivo encontrado, enviando: photo-1768773857942-951251733.png
+🔐 Tentativa de login: { email: 'ong@impulso.com', userExists: true }
+🔑 Comparação de senha: { passwordMatch: true, userType: 'ong' }
+✅ Login bem-sucedido: { userId: '1768770209612', userType: 'ong', firstLogin: undefined }
+🔍 Requisição de arquivo: photo-1768773857942-951251733.png
+📂 Caminho completo: /Users/erjer/Desktop/Impulso Jovem/backend/uploads/photo-1768773857942-951251733.png
+✅ Arquivo encontrado, enviando: photo-1768773857942-951251733.png
+🔐 Tentativa de login: { email: 'jovem@impulso.com', userExists: true }
+🔑 Comparação de senha: { passwordMatch: true, userType: 'jovem' }
+✅ Login bem-sucedido: { userId: '1768773920909', userType: 'jovem', firstLogin: false }
+🔍 Requisição de arquivo: photo-1768773857942-951251733.png
+📂 Caminho completo: /Users/erjer/Desktop/Impulso Jovem/backend/uploads/photo-1768773857942-951251733.png
+✅ Arquivo encontrado, enviando: photo-1768773857942-951251733.png
+🔍 Requisição de arquivo: photo-1768773857942-951251733.png
+📂 Caminho completo: /Users/erjer/Desktop/Impulso Jovem/backend/uploads/photo-1768773857942-951251733.png
+✅ Arquivo encontrado, enviando: photo-1768773857942-951251733.png
+🔍 Buscando serviços disponíveis para clientId: 1768850203339
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'GO', city: 'Goiania' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ❌ Jovem 1768773920909 - localização diferente (SP/São Paulo)
+  📊 Total jovens elegíveis: 0
+
+📦 Processando serviço: service002 - Jardinagem
+  ❌ Jovem 1768773920909 - localização diferente (SP/São Paulo)
+  📊 Total jovens elegíveis: 0
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ❌ Jovem 1768773920909 - localização diferente (SP/São Paulo)
+  📊 Total jovens elegíveis: 0
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ❌ Jovem 1768773920909 - localização diferente (SP/São Paulo)
+  📊 Total jovens elegíveis: 0
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ❌ Jovem 1768773920909 - localização diferente (SP/São Paulo)
+  📊 Total jovens elegíveis: 0
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ❌ Jovem 1768773920909 - localização diferente (SP/São Paulo)
+  📊 Total jovens elegíveis: 0
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ❌ Jovem 1768773920909 - localização diferente (SP/São Paulo)
+  📊 Total jovens elegíveis: 0
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ❌ Jovem 1768773920909 - localização diferente (SP/São Paulo)
+  📊 Total jovens elegíveis: 0
+
+✅ Total de serviços disponíveis para retornar: 0
+🔍 Buscando serviços disponíveis para clientId: 1768850203339
+💰 Margem de lucro configurada: 30%
+📍 Cliente localização: { state: 'GO', city: 'Goiania' }
+🔍 Total de serviços: 8
+🔍 Serviços cadastrados: [
+  {
+    "id": "service001",
+    "title": "Limpeza Básica",
+    "status": "available",
+    "category": "Limpeza"
+  },
+  {
+    "id": "service002",
+    "title": "Jardinagem",
+    "status": "available",
+    "category": "Jardinagem"
+  },
+  {
+    "id": "service003",
+    "title": "Pintura de Parede",
+    "status": "available",
+    "category": "Pintura"
+  },
+  {
+    "id": "service004",
+    "title": "Organização de Ambientes",
+    "status": "available",
+    "category": "Organização"
+  },
+  {
+    "id": "service005",
+    "title": "Manutenção Elétrica Básica",
+    "status": "available",
+    "category": "Elétrica"
+  },
+  {
+    "id": "service006",
+    "title": "Lavagem de Carro",
+    "status": "available",
+    "category": "Automotivo"
+  },
+  {
+    "id": "service007",
+    "title": "Montagem de Móveis",
+    "status": "available",
+    "category": "Montagem"
+  },
+  {
+    "id": "service008",
+    "title": "Passeio com Pets",
+    "status": "available",
+    "category": "Pets"
+  }
+]
+🔍 Serviços disponíveis (status=available): 8
+🔍 Total de jovens: 1
+🔍 Jovens cadastrados: [
+  {
+    "id": "1768773920909",
+    "name": "João Neto",
+    "availability": true,
+    "state": "SP",
+    "city": "São Paulo",
+    "skills": [
+      "Limpeza",
+      "Jardinagem",
+      "Pintura",
+      "Automotivo",
+      "Organização",
+      "Montagem",
+      "Elétrica",
+      "Pets"
+    ]
+  }
+]
+
+📦 Processando serviço: service001 - Limpeza Básica
+  ❌ Jovem 1768773920909 - localização diferente (SP/São Paulo)
+  📊 Total jovens elegíveis: 0
+
+📦 Processando serviço: service002 - Jardinagem
+  ❌ Jovem 1768773920909 - localização diferente (SP/São Paulo)
+  📊 Total jovens elegíveis: 0
+
+📦 Processando serviço: service003 - Pintura de Parede
+  ❌ Jovem 1768773920909 - localização diferente (SP/São Paulo)
+  📊 Total jovens elegíveis: 0
+
+📦 Processando serviço: service004 - Organização de Ambientes
+  ❌ Jovem 1768773920909 - localização diferente (SP/São Paulo)
+  📊 Total jovens elegíveis: 0
+
+📦 Processando serviço: service005 - Manutenção Elétrica Básica
+  ❌ Jovem 1768773920909 - localização diferente (SP/São Paulo)
+  📊 Total jovens elegíveis: 0
+
+📦 Processando serviço: service006 - Lavagem de Carro
+  ❌ Jovem 1768773920909 - localização diferente (SP/São Paulo)
+  📊 Total jovens elegíveis: 0
+
+📦 Processando serviço: service007 - Montagem de Móveis
+  ❌ Jovem 1768773920909 - localização diferente (SP/São Paulo)
+  📊 Total jovens elegíveis: 0
+
+📦 Processando serviço: service008 - Passeio com Pets
+  ❌ Jovem 1768773920909 - localização diferente (SP/São Paulo)
+  📊 Total jovens elegíveis: 0
+
+✅ Total de serviços disponíveis para retornar: 0

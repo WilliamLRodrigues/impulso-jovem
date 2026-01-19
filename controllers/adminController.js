@@ -201,6 +201,107 @@ const exportReport = (req, res) => {
   }
 };
 
+// Obter margem de lucro
+const getProfitMargin = (req, res) => {
+  try {
+    const settings = readDB(FILES.settings);
+    const adminSettings = settings.find(s => s.id === 'admin-settings') || { profitMargin: 0 };
+    res.json({ profitMargin: adminSettings.profitMargin || 0 });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+// Atualizar margem de lucro
+const updateProfitMargin = (req, res) => {
+  try {
+    const { profitMargin } = req.body;
+    
+    if (typeof profitMargin !== 'number' || profitMargin < 0 || profitMargin > 100) {
+      return res.status(400).json({ error: 'Margem de lucro deve ser entre 0 e 100' });
+    }
+
+    let settings = readDB(FILES.settings);
+    const index = settings.findIndex(s => s.id === 'admin-settings');
+    
+    if (index !== -1) {
+      settings[index].profitMargin = profitMargin;
+      settings[index].updatedAt = new Date().toISOString();
+    } else {
+      settings.push({
+        id: 'admin-settings',
+        profitMargin,
+        updatedAt: new Date().toISOString()
+      });
+    }
+    
+    writeDB(FILES.settings, settings);
+    res.json({ profitMargin, message: 'Margem de lucro atualizada com sucesso' });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+// Obter relatório de lucros
+const getProfitReport = (req, res) => {
+  try {
+    const bookings = readDB(FILES.bookings);
+    const ongs = readDB(FILES.ongs);
+    const settings = readDB(FILES.settings);
+    const adminSettings = settings.find(s => s.id === 'admin-settings') || { profitMargin: 0 };
+    const profitMargin = adminSettings.profitMargin || 0;
+
+    // Filtrar apenas serviços completados
+    const completedBookings = bookings.filter(b => b.status === 'completed');
+
+    // Calcular lucros por ONG
+    const profitByOng = {};
+    let totalProfit = 0;
+
+    completedBookings.forEach(booking => {
+      const servicePrice = booking.finalPrice || 0;
+      const profit = (servicePrice * profitMargin) / 100;
+      const basePrice = servicePrice - profit;
+
+      if (!profitByOng[booking.ongId]) {
+        const ong = ongs.find(o => o.id === booking.ongId);
+        profitByOng[booking.ongId] = {
+          ongId: booking.ongId,
+          ongName: ong?.name || 'ONG Desconhecida',
+          totalServices: 0,
+          totalRevenue: 0,
+          totalProfit: 0,
+          baseRevenue: 0
+        };
+      }
+
+      profitByOng[booking.ongId].totalServices += 1;
+      profitByOng[booking.ongId].totalRevenue += servicePrice;
+      profitByOng[booking.ongId].totalProfit += profit;
+      profitByOng[booking.ongId].baseRevenue += basePrice;
+      totalProfit += profit;
+    });
+
+    // Converter para array e ordenar por lucro
+    const profitByOngArray = Object.values(profitByOng).sort((a, b) => b.totalProfit - a.totalProfit);
+
+    res.json({
+      profitMargin,
+      totalProfit: Math.round(totalProfit * 100) / 100,
+      totalCompletedServices: completedBookings.length,
+      profitByOng: profitByOngArray.map(p => ({
+        ...p,
+        totalRevenue: Math.round(p.totalRevenue * 100) / 100,
+        totalProfit: Math.round(p.totalProfit * 100) / 100,
+        baseRevenue: Math.round(p.baseRevenue * 100) / 100,
+        avgProfitPerService: p.totalServices > 0 ? Math.round((p.totalProfit / p.totalServices) * 100) / 100 : 0
+      }))
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
 module.exports = {
   getStats,
   getAllUsers,
@@ -208,5 +309,8 @@ module.exports = {
   createUser,
   updateUser,
   deleteUser,
-  exportReport
+  exportReport,
+  getProfitMargin,
+  updateProfitMargin,
+  getProfitReport
 };

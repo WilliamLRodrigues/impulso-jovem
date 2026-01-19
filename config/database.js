@@ -9,7 +9,8 @@ const FILES = {
   jovens: path.join(DB_PATH, 'jovens.json'),
   services: path.join(DB_PATH, 'services.json'),
   bookings: path.join(DB_PATH, 'bookings.json'),
-  reviews: path.join(DB_PATH, 'reviews.json')
+  reviews: path.join(DB_PATH, 'reviews.json'),
+  settings: path.join(DB_PATH, 'settings.json')
 };
 
 // Initialize database

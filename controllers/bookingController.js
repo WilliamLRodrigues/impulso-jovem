@@ -4,6 +4,21 @@ const { sendBookingConfirmation, sendJovemAcceptedNotification, sendThankYouEmai
 const fs = require('fs');
 const path = require('path');
 
+// Função para calcular preço com margem de lucro
+const calculatePriceWithMargin = (basePrice) => {
+  try {
+    const settings = readDB(FILES.settings);
+    const adminSettings = settings.find(s => s.id === 'admin-settings') || { profitMargin: 0 };
+    const profitMargin = adminSettings.profitMargin || 0;
+    
+    const finalPrice = basePrice + (basePrice * profitMargin / 100);
+    return Math.round(finalPrice * 100) / 100; // Arredondar para 2 casas decimais
+  } catch (error) {
+    console.error('Erro ao calcular margem:', error);
+    return basePrice;
+  }
+};
+
 // Função para deletar fotos do serviço
 const deleteServicePhotos = (photoUrls) => {
   if (!photoUrls || photoUrls.length === 0) return;
@@ -245,6 +260,8 @@ const updateBooking = (req, res) => {
 // Aceitar agendamento (ONG ou Jovem)
 const acceptBooking = (req, res) => {
   const bookings = readDB(FILES.bookings);
+  const jovens = readDB(FILES.jovens);
+  const users = readDB(FILES.users);
   const { jovemId, acceptedBy } = req.body; // acceptedBy pode ser 'ong' ou 'jovem'
   const index = bookings.findIndex(b => b.id === req.params.id);
   
@@ -252,12 +269,49 @@ const acceptBooking = (req, res) => {
     return res.status(404).json({ error: 'Agendamento não encontrado' });
   }
   
-  bookings[index].jovemId = jovemId;
-  bookings[index].status = BOOKING_STATUS.CONFIRMED;
-  bookings[index].acceptedBy = acceptedBy;
-  bookings[index].acceptedAt = new Date().toISOString();
+  const booking = bookings[index];
+  
+  // Gerar PIN automaticamente ao aceitar (tanto ONG quanto Jovem)
+  const checkInPin = Math.floor(1000 + Math.random() * 9000).toString();
+  
+  // Buscar dados do jovem para adicionar ao booking
+  const jovem = jovens.find(j => j.id === jovemId);
+  
+  if (!jovem) {
+    return res.status(404).json({ error: 'Jovem não encontrado' });
+  }
+  
+  bookings[index] = {
+    ...booking,
+    jovemId: jovemId,
+    jovemName: jovem.name,
+    jovemPhoto: jovem.photo,
+    jovemStats: jovem.stats,
+    ongId: jovem.ongId,
+    status: BOOKING_STATUS.CONFIRMED,
+    acceptedBy: acceptedBy || 'ong',
+    acceptedAt: new Date().toISOString(),
+    checkInPin: checkInPin,
+    checkInPinGeneratedAt: new Date().toISOString()
+  };
   
   writeDB(FILES.bookings, bookings);
+  
+  // Enviar email notificando cliente que serviço foi aceito
+  const client = users.find(u => u.id === booking.clientId);
+  
+  if (client && client.email) {
+    sendJovemAcceptedNotification(
+      client.email,
+      client.name,
+      booking.serviceName,
+      jovem.name,
+      booking.date,
+      booking.time,
+      checkInPin
+    ).catch(err => console.error('Erro ao enviar email:', err));
+  }
+  
   res.json(bookings[index]);
 };
 
@@ -265,18 +319,114 @@ const acceptBooking = (req, res) => {
 const getPendingBookingsForOng = (req, res) => {
   const bookings = readDB(FILES.bookings);
   const jovens = readDB(FILES.jovens);
+  const users = readDB(FILES.users);
+  const services = readDB(FILES.services);
   const { ongId } = req.params;
   
   // Buscar jovens da ONG
   const ongJovens = jovens.filter(j => j.ongId === ongId);
   const ongJovensIds = ongJovens.map(j => j.id);
   
-  // Buscar bookings pendentes que têm jovens da ONG recomendados
-  const pendingBookings = bookings.filter(b => 
-    b.status === BOOKING_STATUS.PENDING &&
-    b.recommendedJovens &&
-    b.recommendedJovens.some(rj => ongJovensIds.includes(rj.id))
-  );
+  // Buscar TODAS as bookings pendentes ou assigned que possam ser atribuídas aos jovens da ONG
+  const pendingBookings = bookings
+    .filter(b => {
+      // Incluir apenas pendentes e assigned (jovem já pode ter sido atribuído mas ainda não aceitou)
+      if (b.status !== BOOKING_STATUS.PENDING && b.status !== BOOKING_STATUS.ASSIGNED) {
+        return false;
+      }
+      
+      // Se já está atribuído a um jovem da ONG, incluir
+      if (b.jovemId && ongJovensIds.includes(b.jovemId)) {
+        return true;
+      }
+      
+      // Se tem jovens recomendados da ONG, incluir
+      if (b.recommendedJovens && b.recommendedJovens.some(rj => ongJovensIds.includes(rj.id))) {
+        return true;
+      }
+      
+      // Se não tem recomendados mas a ONG tem jovens com a skill e localização necessária, incluir
+      const service = services.find(s => s.id === b.serviceId);
+      if (!service) return false;
+      
+      const client = users.find(u => u.id === b.clientId);
+      const hasEligibleJovem = ongJovens.some(j => {
+        // Verificar disponibilidade
+        if (!j.availability) return false;
+        
+        // Verificar localização
+        if (client && client.state && client.city) {
+          if (j.state !== client.state || j.city !== client.city) {
+            return false;
+          }
+        }
+        
+        // Verificar skill (por ID de serviço ou categoria)
+        if (j.skills && (j.skills.includes(b.serviceId) || j.skills.includes(service.category))) {
+          return true;
+        }
+        
+        return false;
+      });
+      
+      return hasEligibleJovem;
+    })
+    .map(booking => {
+      // Adicionar informações do cliente
+      const client = users.find(u => u.id === booking.clientId);
+      
+      // Filtrar/buscar jovens recomendados da ONG
+      let ongRecommendedJovens = [];
+      
+      if (booking.recommendedJovens) {
+        // Filtrar jovens recomendados que são da ONG
+        ongRecommendedJovens = booking.recommendedJovens.filter(rj => ongJovensIds.includes(rj.id));
+      }
+      
+      // Se não tem recomendados ou tem poucos, buscar jovens elegíveis da ONG
+      if (ongRecommendedJovens.length === 0) {
+        const service = services.find(s => s.id === booking.serviceId);
+        
+        ongRecommendedJovens = ongJovens
+          .filter(j => {
+            if (!j.availability) return false;
+            
+            if (client && client.state && client.city) {
+              if (j.state !== client.state || j.city !== client.city) return false;
+            }
+            
+            if (service && j.skills) {
+              return j.skills.includes(booking.serviceId) || j.skills.includes(service.category);
+            }
+            
+            return false;
+          })
+          .map(j => ({
+            id: j.id,
+            name: j.name,
+            rating: j.stats?.rating || 0,
+            completedServices: j.stats?.completedServices || 0,
+            ongId: j.ongId,
+            available: true
+          }))
+          .sort((a, b) => b.rating - a.rating)
+          .slice(0, 5);
+      }
+      
+      return {
+        ...booking,
+        clientInfo: client ? {
+          name: client.name,
+          phone: client.phone,
+          address: client.address,
+          city: client.city,
+          state: client.state,
+          fullAddress: `${client.address}, ${client.city} - ${client.state}`
+        } : null,
+        ongRecommendedJovens
+      };
+    })
+    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)); // Mais recentes primeiro
   
   res.json(pendingBookings);
 };
@@ -396,8 +546,14 @@ const getAvailableServicesForClient = (req, res) => {
   const services = readDB(FILES.services);
   const jovens = readDB(FILES.jovens);
   const ongs = readDB(FILES.ongs);
+  const settings = readDB(FILES.settings);
   
   console.log('🔍 Buscando serviços disponíveis para clientId:', clientId);
+  
+  // Obter margem de lucro
+  const adminSettings = settings.find(s => s.id === 'admin-settings') || { profitMargin: 0 };
+  const profitMargin = adminSettings.profitMargin || 0;
+  console.log('💰 Margem de lucro configurada:', profitMargin + '%');
   
   const client = users.find(u => u.id === clientId);
   if (!client) {
@@ -457,6 +613,13 @@ const getAvailableServicesForClient = (req, res) => {
       
       if (availableJovens.length === 0) return null;
       
+      // Calcular preço com margem
+      const basePrice = service.price || 0;
+      const finalPrice = basePrice + (basePrice * profitMargin / 100);
+      const priceWithMargin = Math.round(finalPrice * 100) / 100;
+      
+      console.log(`  💰 Preço base: R$ ${basePrice.toFixed(2)} → Com margem (${profitMargin}%): R$ ${priceWithMargin.toFixed(2)}`);
+      
       // Adicionar informações dos jovens e ONGs
       const jovemsInfo = availableJovens.map(j => {
         const ong = ongs.find(o => o.id === j.ongId);
@@ -475,6 +638,8 @@ const getAvailableServicesForClient = (req, res) => {
           ongComplement: ong?.complement,
           ongCity: ong?.city,
           ongState: ong?.state,
+        basePrice: basePrice,
+        price: priceWithMargin,
           ongFullAddress: ong ? `${ong.address}${ong.complement ? ', ' + ong.complement : ''}, ${ong.city} - ${ong.state}${ong.cep ? ' - CEP: ' + ong.cep : ''}` : '',
           skills: j.skills
         };
@@ -482,6 +647,8 @@ const getAvailableServicesForClient = (req, res) => {
       
       return {
         ...service,
+        basePrice: basePrice,
+        price: priceWithMargin,
         availableJovens: jovemsInfo,
         hasAvailability: jovemsInfo.length > 0
       };
@@ -715,7 +882,8 @@ const completeServiceByClient = (req, res) => {
   
   // Buscar serviço para pegar o preço
   const service = services.find(s => s.id === booking.serviceId);
-  const servicePrice = price || service?.price || 0;
+  const basePrice = price || service?.price || 0;
+  const finalPrice = calculatePriceWithMargin(basePrice);
   
   // Atualizar booking
   bookings[index] = {
@@ -725,7 +893,8 @@ const completeServiceByClient = (req, res) => {
     rating,
     clientReview: review,
     completedPhotos: photos || [],
-    finalPrice: servicePrice
+    basePrice: basePrice,
+    finalPrice: finalPrice
   };
   
   // NÃO deletar fotos do cliente - elas precisam ficar disponíveis no histórico

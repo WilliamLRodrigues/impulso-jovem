@@ -1,6 +1,21 @@
 const { readDB, writeDB, FILES } = require('../config/database');
 const { SERVICE_STATUS } = require('../config/constants');
 
+// Função para calcular preço com margem de lucro
+const calculatePriceWithMargin = (basePrice) => {
+  try {
+    const settings = readDB(FILES.settings);
+    const adminSettings = settings.find(s => s.id === 'admin-settings') || { profitMargin: 0 };
+    const profitMargin = adminSettings.profitMargin || 0;
+    
+    const finalPrice = basePrice + (basePrice * profitMargin / 100);
+    return Math.round(finalPrice * 100) / 100;
+  } catch (error) {
+    console.error('Erro ao calcular margem:', error);
+    return basePrice;
+  }
+};
+
 // Criar serviço
 const createService = (req, res) => {
   const services = readDB(FILES.services);
@@ -26,7 +41,14 @@ const getAllServices = (req, res) => {
   if (jovemId) filtered = filtered.filter(s => s.jovemId === jovemId);
   if (category) filtered = filtered.filter(s => s.category === category);
 
-  res.json(filtered);
+  // Adicionar preço com margem para clientes
+  const servicesWithMargin = filtered.map(service => ({
+    ...service,
+    basePrice: service.price,
+    price: calculatePriceWithMargin(service.price)
+  }));
+
+  res.json(servicesWithMargin);
 };
 
 // Obter serviço específico
@@ -34,7 +56,15 @@ const getServiceById = (req, res) => {
   const services = readDB(FILES.services);
   const service = services.find(s => s.id === req.params.id);
   if (!service) return res.status(404).json({ error: 'Serviço não encontrado' });
-  res.json(service);
+  
+  // Adicionar preço com margem
+  const serviceWithMargin = {
+    ...service,
+    basePrice: service.price,
+    price: calculatePriceWithMargin(service.price)
+  };
+  
+  res.json(serviceWithMargin);
 };
 
 // Atualizar serviço

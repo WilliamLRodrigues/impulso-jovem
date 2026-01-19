@@ -95,6 +95,90 @@ const sendBookingConfirmation = async (clientEmail, clientName, serviceName, dat
   }
 };
 
+// Email de Recuperação de Senha
+const sendPasswordRecovery = async (userEmail, userName, password) => {
+  if (!resend) {
+    console.log('⚠️ Email desabilitado - RESEND_API_KEY não configurada');
+    return;
+  }
+
+  try {
+    await resend.emails.send({
+      from: 'Impulso Jovem <noreply@impulsojovem.com.br>',
+      to: [userEmail],
+      subject: '🔑 Recuperação de Senha - Impulso Jovem',
+      html: `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="utf-8">
+          <style>
+            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+            .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+            .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+            .content { background: #f8f9fa; padding: 30px; border-radius: 0 0 10px 10px; }
+            .card { background: white; padding: 20px; border-radius: 8px; margin: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+            .password-box { background: #E8EAF6; padding: 15px; border-radius: 8px; text-align: center; font-size: 24px; font-weight: bold; color: #667eea; margin: 20px 0; letter-spacing: 2px; }
+            .warning { background: #FFF3E0; border-left: 4px solid #FF9800; padding: 15px; border-radius: 4px; margin: 20px 0; }
+            .footer { text-align: center; padding: 20px; color: #666; font-size: 12px; }
+            .button { background: #667eea; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; display: inline-block; margin: 10px 0; }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <div class="header">
+              <h1>🔑 Recuperação de Senha</h1>
+            </div>
+            <div class="content">
+              <p>Olá, <strong>${userName}</strong>!</p>
+              
+              <p>Você solicitou a recuperação de sua senha no <strong>Impulso Jovem</strong>.</p>
+              
+              <div class="card">
+                <h2 style="color: #667eea; margin-top: 0;">Sua Senha</h2>
+                <div class="password-box">
+                  ${password}
+                </div>
+                <p style="text-align: center; color: #666; font-size: 14px;">
+                  Copie esta senha e use-a para fazer login
+                </p>
+              </div>
+              
+              <div class="warning">
+                <p style="margin: 0;"><strong>⚠️ Importante:</strong></p>
+                <ul style="margin: 10px 0;">
+                  <li>Por segurança, recomendamos trocar esta senha após fazer login</li>
+                  <li>Acesse seu perfil e altere para uma senha de sua preferência</li>
+                  <li>Nunca compartilhe sua senha com outras pessoas</li>
+                </ul>
+              </div>
+              
+              <p style="text-align: center; margin-top: 30px;">
+                <a href="https://www.impulsojovem.com.br/login" class="button">Fazer Login</a>
+              </p>
+              
+              <div style="background: #FFEBEE; border-left: 4px solid #C62828; padding: 15px; border-radius: 4px; margin-top: 20px;">
+                <p style="margin: 0; color: #C62828;"><strong>🚨 Não solicitou esta recuperação?</strong></p>
+                <p style="margin: 10px 0 0 0; font-size: 14px;">Se você não solicitou a recuperação de senha, ignore este e-mail ou entre em contato conosco imediatamente.</p>
+              </div>
+            </div>
+            <div class="footer">
+              <p><strong>Impulso Jovem</strong> - Conectando pessoas e transformando vidas</p>
+              <p>Este é um e-mail automático, por favor não responda.</p>
+            </div>
+          </div>
+        </body>
+        </html>
+      `
+    });
+    
+    console.log('✅ Email de recuperação de senha enviado para:', userEmail);
+  } catch (error) {
+    console.error('❌ Erro ao enviar email de recuperação:', error);
+    throw error;
+  }
+};
+
 // Email 2: Jovem Aceitou o Agendamento
 const sendJovemAcceptedNotification = async (clientEmail, clientName, serviceName, jovemName, date, time, checkInPin) => {
   if (!resend) {
@@ -307,5 +391,7 @@ const sendThankYouEmail = async (clientEmail, clientName, serviceName, jovemName
 module.exports = {
   sendBookingConfirmation,
   sendJovemAcceptedNotification,
-  sendThankYouEmail
+  sendThankYouEmail,
+  sendPasswordRecovery
 };
+

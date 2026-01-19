@@ -2,10 +2,12 @@
   {
     "id": "admin001",
     "email": "admin@impulso.com",
-    "password": "$2b$10$2PjBe2lYSyTvOvNlJkySR.ObVBKKK8AKhSul.L7QJ2kXokGLLe1VG",
+    "password": "$2b$10$Z56nJqyziGsZVUxYP0rIYuEWjOBpblKsc.X2zJ8rACNfqF8PNi/yK",
     "name": "Administrador",
     "userType": "admin",
-    "createdAt": "2026-01-16T00:00:00.000Z"
+    "createdAt": "2026-01-16T00:00:00.000Z",
+    "phone": "",
+    "address": ""
   },
   {
     "id": "1768770209612",
@@ -43,7 +45,7 @@
   {
     "id": "1768775279143",
     "email": "swatusao2@gmail.com",
-    "password": "$2b$10$l/0AMhxkOBdqd.6Nemi8WO5.aMWHTuXKPvPgR8//giD45zT0ErRgS",
+    "password": "$2b$10$AilN4obFFKRL7B.Xm/B/LeGXDFneQTcjgB9wir.R2wdbymJRe1S1y",
     "name": "William Lopes",
     "userType": "cliente",
     "phone": "11948033337",
@@ -54,6 +56,24 @@
     "complement": "",
     "cep": "",
     "cnpj": "",
-    "createdAt": "2026-01-18T22:27:59.143Z"
+    "createdAt": "2026-01-18T22:27:59.143Z",
+    "firstLogin": true,
+    "updatedAt": "2026-01-19T17:42:53.822Z"
+  },
+  {
+    "id": "1768850203339",
+    "email": "cliente2@impulso.com",
+    "password": "$2b$10$vDiZPHEqmSnCm9bma/0ILO.PiA2mKIi04IbF8JLiLGt9uNmqZ19vu",
+    "name": "Cliente 2",
+    "userType": "cliente",
+    "phone": "11778494843",
+    "address": "Rua Goiania 2",
+    "city": "Goiania",
+    "state": "GO",
+    "country": "Brasil",
+    "complement": "",
+    "cep": "",
+    "cnpj": "",
+    "createdAt": "2026-01-19T19:16:43.339Z"
   }
 ]
