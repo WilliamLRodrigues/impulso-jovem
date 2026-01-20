@@ -20,7 +20,6 @@
       "Pintura",
       "Automotivo",
       "Organização",
-      "Montagem",
       "Elétrica",
       "Pets"
     ],
@@ -66,10 +65,10 @@
     "age": 28,
     "availability": true,
     "stats": {
-      "completedServices": 5,
-      "rating": 4.8,
-      "points": 240,
-      "totalEarnings": 265
+      "completedServices": 8,
+      "rating": 4.87,
+      "points": 390,
+      "totalEarnings": 705
     },
     "createdAt": "2026-01-18T22:05:20.921Z",
     "trainingCompletion": {
@@ -79,7 +78,7 @@
   {
     "id": "1768863593424",
     "userId": "1768863593424",
-    "name": "teste",
+    "name": "Fabiano",
     "email": "jovem2@impulso.com",
     "phone": "118374783",
     "birthDate": "1997-03-12",
@@ -89,8 +88,8 @@
     "country": "Brasil",
     "state": "SP",
     "city": "São Paulo",
-    "photo": "",
-    "description": "Aprender",
+    "photo": "/uploads/photo-1768913288617-913881516.png",
+    "description": "Quero aprender e trabalhar para poder ajudar minha familia.",
     "skills": [
       "Limpeza",
       "Jardinagem",

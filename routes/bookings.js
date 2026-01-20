@@ -16,6 +16,7 @@ const {
   generateCheckInPin,
   validateCheckInPin,
   completeServiceByClient,
+  reviewClientByJovem,
   cancelBookingByClient,
   rescheduleBookingByClient
 } = require('../controllers/bookingController');
@@ -32,6 +33,7 @@ router.post('/:id/reject-jovem', authenticateToken, rejectBookingByJovem);
 router.post('/:id/generate-pin', authenticateToken, generateCheckInPin);
 router.post('/:id/validate-pin', authenticateToken, validateCheckInPin);
 router.post('/:id/complete', authenticateToken, completeServiceByClient);
+router.post('/:id/review-client', authenticateToken, reviewClientByJovem);
 router.post('/:id/cancel-client', authenticateToken, cancelBookingByClient);
 router.post('/:id/reschedule-client', authenticateToken, rescheduleBookingByClient);
 router.get('/pending/ong/:ongId', authenticateToken, getPendingBookingsForOng);

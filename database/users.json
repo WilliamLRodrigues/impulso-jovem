@@ -80,10 +80,14 @@
     "id": "1768863593424",
     "email": "jovem2@impulso.com",
     "password": "$2b$10$..DUMjJ8pCUdwuMnW/zNUO6LeD/Ia4YqxW2OSOIkTmZ4oROJ.GcPe",
-    "name": "teste",
+    "name": "Fabiano",
     "userType": "jovem",
     "firstLogin": false,
     "createdAt": "2026-01-19T22:59:53.424Z",
-    "updatedAt": "2026-01-19T23:00:38.451Z"
+    "updatedAt": "2026-01-20T12:45:47.493Z",
+    "phone": "118374783",
+    "address": "Rua Jose Adorno, 402",
+    "state": "SP",
+    "city": "São Paulo"
   }
 ]

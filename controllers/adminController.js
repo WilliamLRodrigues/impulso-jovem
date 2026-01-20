@@ -1,6 +1,48 @@
 const { readDB, writeDB, FILES } = require('../config/database');
 const bcrypt = require('bcryptjs');
 
+const mergeUserProfile = (user, ongs, jovens) => {
+  if (user.userType === 'ong') {
+    const profile = ongs.find(o => o.userId === user.id || o.id === user.id);
+    return {
+      ...user,
+      ...profile,
+      id: user.id,
+      userId: user.id,
+      name: profile?.name ?? user.name,
+      email: profile?.email ?? user.email,
+      phone: profile?.phone ?? user.phone,
+      address: profile?.address ?? user.address,
+      city: profile?.city ?? user.city,
+      state: profile?.state ?? user.state,
+      country: profile?.country ?? user.country,
+      complement: profile?.complement ?? user.complement,
+      cep: profile?.cep ?? user.cep,
+      cnpj: profile?.cnpj ?? user.cnpj
+    };
+  }
+
+  if (user.userType === 'jovem') {
+    const profile = jovens.find(j => j.userId === user.id || j.id === user.id);
+    return {
+      ...user,
+      ...profile,
+      id: user.id,
+      userId: user.id,
+      name: profile?.name ?? user.name,
+      email: profile?.email ?? user.email,
+      phone: profile?.phone ?? user.phone,
+      address: profile?.address ?? user.address,
+      city: profile?.city ?? user.city,
+      state: profile?.state ?? user.state,
+      country: profile?.country ?? user.country,
+      description: profile?.description ?? user.description
+    };
+  }
+
+  return user;
+};
+
 // Dashboard stats
 const getStats = (req, res) => {
   const users = readDB(FILES.users);
@@ -24,23 +66,45 @@ const getStats = (req, res) => {
 // Listar todos os usuários
 const getAllUsers = (req, res) => {
   const users = readDB(FILES.users);
-  res.json(users.map(u => ({ ...u, password: undefined })));
+  const ongs = readDB(FILES.ongs);
+  const jovens = readDB(FILES.jovens);
+  res.json(users.map(u => {
+    const merged = mergeUserProfile(u, ongs, jovens);
+    return { ...merged, password: undefined };
+  }));
 };
 
 // Obter usuário específico
 const getUserById = (req, res) => {
   const users = readDB(FILES.users);
+  const ongs = readDB(FILES.ongs);
+  const jovens = readDB(FILES.jovens);
   const user = users.find(u => u.id === req.params.id);
   if (!user) return res.status(404).json({ error: 'Usuário não encontrado' });
   
-  const { password, ...userData } = user;
+  const merged = mergeUserProfile(user, ongs, jovens);
+  const { password, ...userData } = merged;
   res.json(userData);
 };
 
 // Criar novo usuário
 const createUser = async (req, res) => {
   try {
-    const { email, password, name, userType, phone, address } = req.body;
+    const {
+      email,
+      password,
+      name,
+      userType,
+      phone,
+      address,
+      city,
+      state,
+      country,
+      complement,
+      cep,
+      cnpj,
+      description
+    } = req.body;
     const users = readDB(FILES.users);
 
     if (users.find(u => u.email === email)) {
@@ -56,6 +120,12 @@ const createUser = async (req, res) => {
       userType,
       phone,
       address,
+      city,
+      state,
+      country,
+      complement,
+      cep,
+      cnpj,
       createdAt: new Date().toISOString()
     };
 
@@ -69,8 +139,15 @@ const createUser = async (req, res) => {
         id: newUser.id,
         userId: newUser.id,
         name,
+        email,
         address,
         phone,
+        city,
+        state,
+        country,
+        complement,
+        cep,
+        cnpj,
         services: [],
         jovens: [],
         stats: { totalServices: 0, activeJovens: 0, rating: 0 }
@@ -82,10 +159,20 @@ const createUser = async (req, res) => {
         id: newUser.id,
         userId: newUser.id,
         name,
+        email,
         phone,
+        address,
+        city,
+        state,
+        country,
+        birthDate: req.body.birthDate || '',
+        cpf: req.body.cpf || '',
+        rg: req.body.rg || '',
+        description: description || '',
         ongId: null,
         skills: [],
         availability: true,
+        trainingCompletion: {},
         stats: { completedServices: 0, rating: 0, points: 0 },
         location: null
       });
@@ -121,14 +208,39 @@ const updateUser = async (req, res) => {
       const ongs = readDB(FILES.ongs);
       const ongIndex = ongs.findIndex(o => o.userId === user.id);
       if (ongIndex !== -1) {
-        ongs[ongIndex] = { ...ongs[ongIndex], name: user.name, phone: user.phone, address: user.address };
+        ongs[ongIndex] = {
+          ...ongs[ongIndex],
+          name: user.name,
+          email: user.email,
+          phone: user.phone,
+          address: user.address,
+          city: user.city,
+          state: user.state,
+          country: user.country,
+          complement: user.complement,
+          cep: user.cep,
+          cnpj: user.cnpj
+        };
         writeDB(FILES.ongs, ongs);
       }
     } else if (user.userType === 'jovem') {
       const jovens = readDB(FILES.jovens);
       const jovemIndex = jovens.findIndex(j => j.userId === user.id);
       if (jovemIndex !== -1) {
-        jovens[jovemIndex] = { ...jovens[jovemIndex], name: user.name, phone: user.phone };
+        jovens[jovemIndex] = {
+          ...jovens[jovemIndex],
+          name: user.name,
+          email: user.email,
+          phone: user.phone,
+          address: user.address,
+          city: user.city,
+          state: user.state,
+          country: user.country,
+          birthDate: updateData.birthDate ?? jovens[jovemIndex].birthDate,
+          cpf: updateData.cpf ?? jovens[jovemIndex].cpf,
+          rg: updateData.rg ?? jovens[jovemIndex].rg,
+          description: updateData.description ?? jovens[jovemIndex].description
+        };
         writeDB(FILES.jovens, jovens);
       }
     }

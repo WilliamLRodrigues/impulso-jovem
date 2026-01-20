@@ -53,6 +53,20 @@ const calculatePriceWithMargin = (basePrice) => {
   }
 };
 
+const ensureBookingPrices = (booking, services) => {
+  if (!booking) return booking;
+
+  const service = services.find(s => s.id === booking.serviceId);
+  const basePrice = service?.price ?? booking.basePrice ?? 0;
+  const finalPrice = booking.finalPrice ?? calculatePriceWithMargin(basePrice);
+
+  return {
+    ...booking,
+    basePrice,
+    finalPrice
+  };
+};
+
 // Função para deletar fotos do serviço
 const deleteServicePhotos = (photoUrls) => {
   if (!photoUrls || photoUrls.length === 0) return;
@@ -215,11 +229,16 @@ const createBooking = (req, res) => {
 
   // Atribuição automática ao melhor jovem disponível
   const assignedJovem = sortedJovens[0] || null;
+
+  const basePrice = service.price || 0;
+  const finalPrice = calculatePriceWithMargin(basePrice);
   
   const newBooking = {
     id: Date.now().toString(),
     ...req.body,
     serviceCategory: service.category,
+    basePrice,
+    finalPrice,
     jovemId: assignedJovem ? assignedJovem.id : null,
     jovemName: assignedJovem ? assignedJovem.name : null,
     jovemPhoto: assignedJovem ? assignedJovem.photo : null,
@@ -262,6 +281,7 @@ const createBooking = (req, res) => {
 // Listar agendamentos
 const getAllBookings = (req, res) => {
   const bookings = readDB(FILES.bookings);
+  const services = readDB(FILES.services);
   const { clientId, jovemId, status } = req.query;
 
   let filtered = bookings;
@@ -269,15 +289,16 @@ const getAllBookings = (req, res) => {
   if (jovemId) filtered = filtered.filter(b => b.jovemId === jovemId);
   if (status) filtered = filtered.filter(b => b.status === status);
 
-  res.json(filtered);
+  res.json(filtered.map(booking => ensureBookingPrices(booking, services)));
 };
 
 // Obter agendamento específico
 const getBookingById = (req, res) => {
   const bookings = readDB(FILES.bookings);
+  const services = readDB(FILES.services);
   const booking = bookings.find(b => b.id === req.params.id);
   if (!booking) return res.status(404).json({ error: 'Agendamento não encontrado' });
-  res.json(booking);
+  res.json(ensureBookingPrices(booking, services));
 };
 
 // Atualizar agendamento
@@ -899,7 +920,7 @@ const completeServiceByClient = (req, res) => {
   const services = readDB(FILES.services);
   const reviews = readDB(FILES.reviews);
   const bookingId = req.params.id;
-  const { clientId, rating, review, photos, price } = req.body;
+  const { clientId, rating, review, photos } = req.body;
   
   const index = bookings.findIndex(b => b.id === bookingId);
   if (index === -1) {
@@ -925,7 +946,7 @@ const completeServiceByClient = (req, res) => {
   
   // Buscar serviço para pegar o preço
   const service = services.find(s => s.id === booking.serviceId);
-  const basePrice = price || service?.price || 0;
+  const basePrice = service?.price || 0;
   const finalPrice = calculatePriceWithMargin(basePrice);
   
   // Atualizar booking
@@ -950,6 +971,10 @@ const completeServiceByClient = (req, res) => {
     serviceId: booking.serviceId,
     jovemId: booking.jovemId,
     clientId: clientId,
+    reviewerType: 'client',
+    reviewerId: clientId,
+    targetType: 'jovem',
+    targetId: booking.jovemId,
     rating: rating,
     comment: review,
     photos: photos || [],
@@ -977,7 +1002,7 @@ const completeServiceByClient = (req, res) => {
       completedServices: totalServices,
       rating: parseFloat(newAverageRating.toFixed(2)),
       points: (currentStats.points || 0) + (rating * 10), // 10 pontos por estrela
-      totalEarnings: (currentStats.totalEarnings || 0) + finalPrice
+      totalEarnings: (currentStats.totalEarnings || 0) + basePrice
     };
   }
   
@@ -1008,6 +1033,73 @@ const completeServiceByClient = (req, res) => {
     message: 'Serviço finalizado com sucesso!',
     booking: bookings[index],
     earnings: finalPrice
+  });
+};
+
+// Jovem avalia cliente após conclusão
+const reviewClientByJovem = (req, res) => {
+  const bookings = readDB(FILES.bookings);
+  const reviews = readDB(FILES.reviews);
+  const bookingId = req.params.id;
+  const { jovemId, rating, review } = req.body;
+
+  const index = bookings.findIndex(b => b.id === bookingId);
+  if (index === -1) {
+    return res.status(404).json({ error: 'Agendamento não encontrado' });
+  }
+
+  const booking = bookings[index];
+
+  if (booking.jovemId !== jovemId) {
+    return res.status(403).json({ error: 'Você não está autorizado' });
+  }
+
+  if (booking.status !== 'completed') {
+    return res.status(400).json({ error: 'Serviço ainda não foi concluído' });
+  }
+
+  if (!booking.rating) {
+    return res.status(400).json({ error: 'O cliente ainda não avaliou este serviço' });
+  }
+
+  if (booking.jovemRating) {
+    return res.status(400).json({ error: 'Cliente já avaliado pelo jovem' });
+  }
+
+  if (rating < 1 || rating > 5) {
+    return res.status(400).json({ error: 'Avaliação deve ser entre 1 e 5' });
+  }
+
+  bookings[index] = {
+    ...booking,
+    jovemRating: rating,
+    jovemReview: review,
+    jovemReviewedAt: new Date().toISOString()
+  };
+
+  const newReview = {
+    id: Date.now().toString(),
+    bookingId,
+    serviceId: booking.serviceId,
+    jovemId: booking.jovemId,
+    clientId: booking.clientId,
+    reviewerType: 'jovem',
+    reviewerId: booking.jovemId,
+    targetType: 'client',
+    targetId: booking.clientId,
+    rating,
+    comment: review,
+    createdAt: new Date().toISOString()
+  };
+
+  reviews.push(newReview);
+  writeDB(FILES.bookings, bookings);
+  writeDB(FILES.reviews, reviews);
+
+  res.json({
+    success: true,
+    message: 'Avaliação registrada com sucesso!',
+    booking: bookings[index]
   });
 };
 
@@ -1137,6 +1229,7 @@ module.exports = {
   generateCheckInPin,
   validateCheckInPin,
   completeServiceByClient,
+  reviewClientByJovem,
   cancelBookingByClient,
   rescheduleBookingByClient
 };
